@@ -1,6 +1,10 @@
 package rpg;
 
+import java.awt.Desktop;
+import java.io.File;
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class TrojanRPG {
 	// variaveis "globais"
@@ -9,8 +13,8 @@ public class TrojanRPG {
 	static Scanner entrada = new Scanner(System.in);
 
 	public static void main(String[] args) throws Exception {
-		menu();
-
+		// menu();
+		capituloQuatro();
 	}
 
 	// métodos do jogo
@@ -123,6 +127,25 @@ public class TrojanRPG {
 		menu();
 	}
 
+	public static void capituloQuatro() throws Exception {
+		digita("Enquanto estávamos nos esgueirando por entre os prédios e casas, fiquei pensando como seria se não tivesse \n"
+				+ "baixado aquele vírus. Talvez estaria tranquilo em casa comendo salgadinho e tomando refrigerante enquanto \n"
+				+ "assistia algum vídeo no Youtube.\n\n", 0);
+		digita("Alberto viu que meu pensamento estava longe e logo me repreendeu. Disse-me pra focar no nosso objetivo. \n"
+				+ "Tínhamos que planejar a invasão na prefeitura.\n\n", 0);
+		digita("Quando chegamos no prédio da prefeitura, vimos algo que me desanimou. Estava cheio de capangas. \n"
+				+ "Devia ter uns oito vírus de baixo escalão fazendo ronda.\n\n", 0);
+		visualizaImagem("Q1Cap4.jpg");
+
+		if(embaralhaEEscolheQuatroAlternativas(new String[] { "a", "b", "c", "d" }, 1)) {
+			System.out.println("parabens");
+		}else {
+			System.out.println("errou");
+		}
+		
+
+	}
+
 	// métodos de funcionalidades do game
 
 	/**
@@ -168,4 +191,76 @@ public class TrojanRPG {
 			Thread.sleep(milisPorChar);
 		}
 	}
+
+	/**
+	 * Método que abre o arquivo de imagem localizado na raiz do projeto, na pasta
+	 * img.
+	 * 
+	 * @param imagem String com o nome da imagem e sua extenção Ex: test.jpg
+	 * @throws Exception
+	 */
+	public static void visualizaImagem(String imagem) throws Exception {
+
+		File f = new File("img/" + imagem);
+		Desktop d = Desktop.getDesktop();
+		d.open(f);
+
+	}
+	/**
+	 * 
+	 * @param alternativas array contendo as alternativas
+	 * @param indiceCorreto indice do array de alternativas que é a correta    (OBS: indice começa no 0)
+	 * @return Booleano
+	 * @throws Exception
+	 */
+	public static boolean embaralhaEEscolheQuatroAlternativas(String[] alternativas, int indiceCorreto) throws Exception {
+		String escolhaCorreta = "";
+		boolean sai = false;
+		ArrayList<String> listaEmbaralhada = new ArrayList<String>();
+		for (String string : alternativas) {
+			listaEmbaralhada.add(string);
+		}
+		Collections.shuffle(listaEmbaralhada);
+
+		for (int i = 0; i < listaEmbaralhada.size(); i++) {
+			System.out.println((i + 1) + ". " + listaEmbaralhada.get(i));
+		}
+
+		digita("Escolha a alternativa correta", milisPorChar);
+		int escolha = entrada.nextInt();
+		do {
+		switch (escolha) {
+		case 1:
+			escolhaCorreta = listaEmbaralhada.get(0);
+			sai = true;
+			break;
+		case 2:
+			escolhaCorreta = listaEmbaralhada.get(1);
+			sai = true;
+			break;
+
+		case 3:
+			escolhaCorreta = listaEmbaralhada.get(2);
+			sai = true;
+			break;
+
+		case 4:
+			escolhaCorreta = listaEmbaralhada.get(3);
+			sai = true;
+			break;
+
+
+		default:
+			digita("Alternativa não existe!", milisPorChar);;
+			break;
+		}
+		}while(!sai);
+		if(escolhaCorreta == alternativas[indiceCorreto]) {
+			return true;
+		}else {
+			return false;
+		}
+
+	}
+
 }
