@@ -13,7 +13,7 @@ public class TrojanRPG {
 	static Scanner entrada = new Scanner(System.in);
 
 	public static void main(String[] args) throws Exception {
-		// menu();
+		//menu();
 		capituloQuatro();
 	}
 
@@ -45,7 +45,7 @@ public class TrojanRPG {
 				break;
 
 			case 4:
-				digita("Saindo...", milisPorChar);
+				digita("Saindo do jogo...", milisPorChar);
 				System.exit(1);
 				break;
 
@@ -136,8 +136,8 @@ public class TrojanRPG {
 		digita("Quando chegamos no prédio da prefeitura, vimos algo que me desanimou. Estava cheio de capangas. \n"
 				+ "Devia ter uns oito vírus de baixo escalão fazendo ronda.\n\n", 0);
 		visualizaImagem("Q1Cap4.jpg");
-
-		if(embaralhaEEscolheQuatroAlternativas(new String[] { "a", "b", "c", "d" }, 1)) {
+		
+		if(embaralhaEEscolheQuatroAlternativas(new String[] { "Joao", "Maria", "Jose", "Diego" }, 1)) {
 			System.out.println("parabens");
 		}else {
 			System.out.println("errou");
@@ -214,6 +214,7 @@ public class TrojanRPG {
 	 * @throws Exception
 	 */
 	public static boolean embaralhaEEscolheQuatroAlternativas(String[] alternativas, int indiceCorreto) throws Exception {
+		//parte que embaralha
 		String escolhaCorreta = "";
 		boolean sai = false;
 		ArrayList<String> listaEmbaralhada = new ArrayList<String>();
@@ -221,11 +222,14 @@ public class TrojanRPG {
 			listaEmbaralhada.add(string);
 		}
 		Collections.shuffle(listaEmbaralhada);
-
+		
+		//imprime alternativas na tela
 		for (int i = 0; i < listaEmbaralhada.size(); i++) {
 			System.out.println((i + 1) + ". " + listaEmbaralhada.get(i));
 		}
 
+		
+		// parte que escolhe
 		digita("Escolha a alternativa correta", milisPorChar);
 		int escolha = entrada.nextInt();
 		do {
@@ -255,6 +259,7 @@ public class TrojanRPG {
 			break;
 		}
 		}while(!sai);
+		
 		if(escolhaCorreta == alternativas[indiceCorreto]) {
 			return true;
 		}else {
