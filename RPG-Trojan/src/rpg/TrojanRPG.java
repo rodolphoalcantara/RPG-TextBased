@@ -130,11 +130,11 @@ public class TrojanRPG {
 	public static void capituloQuatro() throws Exception {
 		digita("Enquanto estávamos nos esgueirando por entre os prédios e casas, fiquei pensando como seria se não tivesse \n"
 				+ "baixado aquele vírus. Talvez estaria tranquilo em casa comendo salgadinho e tomando refrigerante enquanto \n"
-				+ "assistia algum vídeo no Youtube.\n\n", 0);
+				+ "assistia algum vídeo no Youtube.\n\n", milisPorChar);
 		digita("Alberto viu que meu pensamento estava longe e logo me repreendeu. Disse-me pra focar no nosso objetivo. \n"
-				+ "Tínhamos que planejar a invasão na prefeitura.\n\n", 0);
+				+ "Tínhamos que planejar a invasão na prefeitura.\n\n", milisPorChar);
 		digita("Quando chegamos no prédio da prefeitura, vimos algo que me desanimou. Estava cheio de capangas. \n"
-				+ "Devia ter uns oito vírus de baixo escalão fazendo ronda.\n\n", 0);
+				+ "Devia ter uns oito vírus de baixo escalão fazendo ronda.\n\n", milisPorChar);
 		visualizaImagem("Q1Cap4.jpg");
 		
 		if(embaralhaEEscolheQuatroAlternativas(new String[] { "Joao", "Maria", "Jose", "Diego" }, 1)) {
