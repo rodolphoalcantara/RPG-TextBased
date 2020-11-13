@@ -17,9 +17,9 @@ public class TrojanRPG {
 
 	public static void main(String[] args) throws Exception {
 		// menu();
-		 capituloQuatro();
+		//capituloQuatro();
 		// prologo();
-		//capituloUm();
+		capituloUm();
 	}
 
 	// métodos do jogo
@@ -325,8 +325,49 @@ public class TrojanRPG {
 				milisPorChar);
 
 		digita("Fiquei olhando para aqueles vídeos e não percebi que um grupo de malwares estavam vindo em minha direção.\nEram capangas do TROJAN"
-				+ " e estavam tentando me levar a força para seu chefe.", milisPorChar);
+				+ " e estavam tentando me levar a força para seu chefe.\n", milisPorChar);
+		
+		digita("\nDESAFIO: \n\n", milisPorChar);
 
+		digita("Na Algebra Booleana And e Or são representados com quais sinais matematica?\n\n", milisPorChar);
+		
+		if (embaralhaEEscolheQuatroAlternativas(
+				new String[] {"Multiplicação e Adição", "Subtração e Divisão", "Multiplicação e divisão", "Subtração e Adição"}, 0)) {
+			// acertou
+			digita("\nComecei a ir para trás e me vi encurralado em uma espécie de beco, olhei para o lado e tinha um grande cano feito de bytes.\n"
+					+ " Usei este cano como uma lança e destruí os malwares, de um jeito que nem eu imaginaria conseguir.\n"
+					+ " De repente das sombras saiu um vulto branco brilhante\r\n"+
+					
+					"\n", milisPorChar);
+				}
+		//errou
+		else { 
+			digita("\nComecei a ir para trás e me vi encurralado em uma espécie de beco,\n"
+					+ " olhei para o lado e tinha apenas uma lata de lixo, como aquelas americanas que vemos em filmes, só que feita de bytes\n"
+					+ "Peguei a tampa e usei como um escudo... apanhei bastante e com isso perdi um coração de vida\n"
+					+ "Mas para meu alívio, vi um vulto branco que foi em direção ao grupo de malwares e, com a ajuda dele, os derrotamos. \n", milisPorChar);
+			perdeVida(1);
+		}
+		
+		digita("Olá forasteiro. - O brilhoso ser falou – O que você quer em meu território?! Por favor identifique-se. \n", milisPorChar);
+		digita("Quando ele falou aquilo seu brilho começou a diminuir e se mostrou um chefe de polícia, meio machucado e com sua barba de bytes por fazer. \n", milisPorChar);
+		digita("- Irei pedir só mais uma vez. Por favor identifique-se. - Disse agora com um tom enérgico. \n", milisPorChar);
+		
+		digita("Depois de explicar quem eu era e tudo o que aconteceu, o policial estava me olhando com uma cara de espanto.\n"
+				+ "Apenas pelo seu semblante pude notar um mix de emoções\n"
+				+ "Felicidade, por estar conhecendo seu criador e a pessoa em que todos os moradores do computador admiravam.\n"
+				+ "E Raiva, por descobrir que seu criador havia causado toda aquela destruição e mortes.\n"
+				+ "Porém, mesmo sentindo tudo isso ele sabia que a única pessoa que podia acabar com tudo aquilo era eu.\n"
+				+ "- Veja, tudo o que aconteceu. Antes, essas ruas eram cheias de bytes andando de um lado pro outro\n"
+				+ "Trafegando informações para onde você solicitava.\n"
+				+ "Víamos que você adorava passar horas no computador e isso nos alegrava.\n"
+				+ "Mas, um dia você resolveu entrar em um fórum e baixar aquele software malicioso \n"
+				+ "– Disse o policial que agora estava sentindo tristeza lembrando de seus amigos e familiares mortos.\n"
+				+ "- Bom... Não devemos viver do passado. – disse ele – Somente VOCÊ pode nos salvar.\n"
+				+ "Só você pode desinstalar esse vírus na PORRADA.\n\n", milisPorChar);
+		
+		
+		
 	}
 
 	public static void capituloQuatro() throws Exception {
