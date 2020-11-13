@@ -2,24 +2,39 @@ package testes;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 import java.util.Scanner;
 
 
 public class TesteDosMetodos {
 	//variavel "global"
 	static Scanner entrada = new Scanner(System.in);
+	static Random random = new Random();
+	
 	static long milisPorChar = 20; //valor padrao é 65;
 	
 	
 	
 	public static void main(String[] args) throws Exception {
 		
-		if(embaralhaEEscolheQuatroAlternativas(new String[] { "Joao", "Maria", "Jose", "Diego" }, 1)) {
-			System.out.println("parabens");
-		}else {
-			System.out.println("errou");
+		/*
+		 * if(embaralhaEEscolheQuatroAlternativas(new String[] { "Joao", "Maria",
+		 * "Jose", "Diego" }, 1)) { System.out.println("parabens"); }else {
+		 * System.out.println("errou"); }
+		 */
+		
+		int totalTiradoNosDados = 0;
+		int nDeJogadasDoDado = 3;
+		//jogar os dados
+		for (int i = 0; i < nDeJogadasDoDado ; i++) {
+			totalTiradoNosDados += random.nextInt(6)+1;
+			System.out.println(totalTiradoNosDados);
 		}
+		
+		System.out.println("Total: "+ totalTiradoNosDados);
+		
 	}
+	
 	
 	
 	
