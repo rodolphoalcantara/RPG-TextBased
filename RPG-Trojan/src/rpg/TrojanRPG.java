@@ -710,10 +710,25 @@ public class TrojanRPG {
 				+ "Parecia uma situação de guerra, mas ali estavam seguros.\n"
 				+ "Alberto foi ver se seus subordinados e amigos estavam precisando de algo e me disse para procurar na sala dele,\n"
 				+ "pois tinha um cofre que ele nunca tinha aberto. E Nem sabia o que podia ter dentro.\n"
+<<<<<<< HEAD
 				+ "Fui até lá e a senha estava escrita em decimal do lado do cofre. Porém, o cofre precisava de uma senha em hexadecimal.\n\n",
 				milisPorChar);
 		// DESAFIO
 		// acertou
+=======
+				+ "Fui até lá e a senha estava escrita em decimal do lado do cofre. Porém, o cofre precisava de uma senha em hexadecimal.\n\n", milisPorChar);
+		//DESAFIO
+		int saida=0;
+		do{ 
+			digita("A senha é TROJAN escrito em Hexadecimal\n\n"
+		
+				+ "escolha a alternativa que corresponde TROJAN em hexadecimal:\n\n", milisPorChar);
+		if (embaralhaEEscolheQuatroAlternativas(
+				new String[] {"54524F4A414E", "597A4G4A6D2A1", "A1D4E533HF1", "A1D8E9A6S1F1"}, 0)) {
+					
+		//acertou
+			
+>>>>>>> b6febf9327328499c49afb563ff31ad199590a48
 		digita("- Consegui! – dei um grito que todos puderam ouvir.\n"
 				+ "Quando olhei para trás tinha três policiais com caras de assustados e armas em punho me olhando.\n"
 				+ "E o Alberto veio logo em seguida.\n" + "E aí?! Será que está aí?!\n"
@@ -724,9 +739,24 @@ public class TrojanRPG {
 				+ "- Por que vocês não pedem direto para o Administrador?!\n"
 				+ "Ele pode até ter sido corrompido pelo Trojan, mas ele pode te dar a permissão se gostar de você.\n"
 				+ "Ele ainda vive em sua empresa.", milisPorChar);
+		saida = 1;
+		
+		}
+		else
+			digita("\nVocê errou !!! tente novamente:\n", milisPorChar);
+		
+		}while(saida==0);
+		
 		digita("\n- Aquela escrita “B. Rain”! – apontando para a janela.\n", milisPorChar);
 		// ENTRAR NA B RAIN
+<<<<<<< HEAD
 
+=======
+		capituloTresBRain();
+		
+		
+		
+>>>>>>> b6febf9327328499c49afb563ff31ad199590a48
 	}
 
 	public static void capituloTresBanco() throws Exception {
@@ -748,10 +778,24 @@ public class TrojanRPG {
 				+ "Quando cheguei ao meu cofre lembrei que talvez não soubesse minha senha,\n"
 				+ " tentei algumas possíveis, mas não tive sucesso.\n"
 				+ "Foi ai que o gerente do banco me deu um papel com uma dica:\n"
+<<<<<<< HEAD
 				+ "Uma senha em decimal que eu teria que colocar em meu cofre, porém ele só aceitava hexadecimal.\n",
 				milisPorChar);
 
 		// ACERTOU
+=======
+				+ "Uma senha em decimal que eu teria que colocar em meu cofre, porém ele só aceitava hexadecimal.\n", milisPorChar);
+		//DESAFIO
+		int saida=0;
+		do{ 
+			digita("A senha é TROJAN escrito em Hexadecimal\n\n"
+		
+				+ "escolha a alternativa que corresponde TROJAN em hexadecimal:\n\n", milisPorChar);
+		if (embaralhaEEscolheQuatroAlternativas(
+				new String[] {"54524F4A414E", "597A4G4A6D2A1", "A1D4E533HF1", "A1D8E9A6S1F1"}, 0)) {
+							
+		//ACERTOU
+>>>>>>> b6febf9327328499c49afb563ff31ad199590a48
 		digita("\n- Consegui! – disse eu, já entrando naquele enorme cofre.\n"
 				+ "Tinha poucos itens dentro, informações pessoais, fotos, vídeos...\n"
 				+ "Coisas mais restritas que não estavam passando nos telões da cidade.\n"
@@ -762,9 +806,24 @@ public class TrojanRPG {
 				+ "Ele pode até ter sido corrompido pelo Trojan, mas ele pode te dar a permissão se gostar de você.\n"
 				+ "Ele ainda vive em sua empresa.\n", milisPorChar);
 		digita("- Aquela escrita “B. Rain”! – apontando para a janela\n", milisPorChar);
+<<<<<<< HEAD
 
 		// PARTE DA B.RAIN
 
+=======
+		
+saida = 1;
+		
+		}
+		else
+			digita("\nVocê errou !!! tente novamente:\n", milisPorChar);
+		
+		}while(saida==0);
+		
+		//PARTE DA B.RAIN
+		capituloTresBRain();
+		
+>>>>>>> b6febf9327328499c49afb563ff31ad199590a48
 	}
 
 	public static void capituloTresBRain() throws Exception {
