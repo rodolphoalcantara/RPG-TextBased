@@ -17,10 +17,10 @@ public class TrojanRPG {
 
 	public static void main(String[] args) throws Exception {
 		// menu();
-		capituloQuatro();
+		//capituloQuatro();
 		// prologo();
 		// capituloUm();
-		// capituloTres();
+		 capituloTres();
 		// capituloTresDelegacia();
 		// capituloTresBanco();
 		// capituloTresBRain();
@@ -389,7 +389,7 @@ public class TrojanRPG {
 
 	public static void capituloTres() throws Exception {
 
-		digita("\nCapítulo Três - Selva de Bytes\n", milisPorChar);
+		digita("\nCapítulo Três - Selva de Bytes\n\n", milisPorChar);
 
 		digita("Depois de nos informar onde seu chefe estava e sobre essa tal chave de acesso,\n"
 				+ "o Spyware estava preparando para falar como a gente poderia conseguir a chave.\n"
@@ -414,9 +414,30 @@ public class TrojanRPG {
 				+ "Todas as linhas de código do vírus foram deletadas…\n", milisPorChar);
 		digita("Por um momento me senti aliviado e parece que isso me rendeu um coração a mais.\n\n", milisPorChar);
 		bonusDeVida(1);
-		digita("Paramos e pegamos o mapa da cidade.\r\n" + "- Onde nós deveríamos procurar? – perguntou Alberto.\r\n"
+		digita("Paramos e pegamos o mapa da cidade.\r\n" + "- Onde nós deveríamos procurar? – perguntou Alberto.\r\n\n"
 				+ "", milisPorChar);
-
+		
+		boolean repetir = false;
+		do {
+		digita("Podemos ir para o Banco ou a delegacia, qual você gostaria de ir:\n", milisPorChar);
+		digita("1. Banco\n",milisPorChar);
+		digita("2. Delegacia\n",milisPorChar);
+		int n1 = entrada.nextInt();
+		
+		switch (n1) {
+		case 1:
+			capituloTresBanco();
+			
+		case 2:
+			capituloTresDelegacia();
+			
+		default:
+			System.out.print("\n Não tem essa opção !!!\n");
+			System.out.print(" Tente novamente\n\n");
+			repetir = true;
+			break;
+		}
+		} while (repetir);
 	}
 
 	public static void capituloQuatro() throws Exception {
@@ -826,7 +847,6 @@ public class TrojanRPG {
 				+ "Era EU! Ele tinha minha cara. Fiquei apavorado, mas ele me explicou.\n"
 				+ "Como eu era o dono do computador, eu era o próprio administrador.\n"
 				+ "Ele virou pra mim com um cartão.\n" + "Algo como um cartão de acesso escrito: Administrador.\n"
-				+ "Ele virou pra mim com um cartão.\n" + " Algo como um cartão de acesso escrito: Administrador.\n"
 				+ "- Você vai precisar de uma ajuda, o Trojan é forte. Tome isso, leve com você!\n"
 				+ "– disse o Administrador me entregando uma espécie de colete resistente.\n", milisPorChar);
 		bonusDeVida(1);
