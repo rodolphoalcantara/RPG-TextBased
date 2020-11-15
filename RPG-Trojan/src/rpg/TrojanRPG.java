@@ -11,13 +11,17 @@ public class TrojanRPG {
 	// variaveis "globais"
 	static int vida = 5;
 	static boolean furioso = false;
-	static long milisPorChar = 10;// 65
+	static long milisPorChar = 65;// padrão = 65
 	static Scanner entrada = new Scanner(System.in);
 	static Random random = new Random();
 
 	public static void main(String[] args) throws Exception {
-		// menu();
-		capituloQuatro();
+		 
+		inicioDoJogo();
+		
+		 //testes:
+		//menu();
+		//capituloQuatro();
 		// prologo();
 		// capituloUm();
 		// capituloTres();
@@ -25,6 +29,27 @@ public class TrojanRPG {
 		// capituloTresBanco();
 		// capituloTresBRain();
 	}
+	
+	
+	public static void inicioDoJogo() throws Exception {
+		digita("Rodolpho, Felipe e Gessione\n"
+				+ "Apresentam: \n\n", 120);
+		
+		digita("###############################################################################\n" + 
+				"##                                                                           ##\n" + 
+				"##  .___________..______        ______          __       ___      .__  __.   ##\n" + 
+				"##  |           ||   _  \\      /  __  \\        |  |     /   \\     |  \\ |  |  ## \n" + 
+				"##  `---|  |----`|  |_)  |    |  |  |  |       |  |    /  ^  \\    |   \\|  |  ##\n" + 
+				"##      |  |     |      /     |  |  |  | .--.  |  |   /  /_\\  \\   |  . `  |  ##\n" + 
+				"##      |  |     |  |\\  \\----.|  `--'  | |  `--'  |  /  _____  \\  |  |\\   |  ##\n" + 
+				"##      |__|     | _| `._____| \\______/   \\______/  /__/     \\__\\ |__| \\__|  ##\n" + 
+				"##                                                                           ##\n" + 
+				"###############################################################################\n\n\n", 0);
+		
+		digita("  \n\n", 1000);
+		menu();
+	}
+	
 
 	// métodos do jogo
 
@@ -40,7 +65,7 @@ public class TrojanRPG {
 			switch (n1) {
 
 			case 1:
-				// Iniciar o jogo//
+				modoDeJogo();
 				break;
 
 			case 2:
@@ -67,6 +92,100 @@ public class TrojanRPG {
 			}
 
 		} while (repetir);
+
+	}
+
+	//escolhe o modo de jogo: Normal(do inicio) e capitulos(escolher um)
+	public static void modoDeJogo() throws Exception {
+		while (true) {
+			digita("Escolha o modo de jogo: \n", milisPorChar);
+			digita("1. Normal\n" 
+					+ "2. Capítulos\n"
+					+ "3. Sair\n\n", milisPorChar);
+
+			int escolha = entrada.nextInt();
+			switch (escolha) {
+			case 1:
+				jogar();
+				break;
+			case 2:
+				capitulos();
+				break;
+			case 3:
+				menu();
+				break;
+
+			default:
+				digita("Não entendi o que você quis dizer . . .\n\n", milisPorChar);
+				break;
+			}
+		}
+
+	}
+
+	public static void jogar() throws Exception {
+
+		while (true) {
+			digita("Você gostaria que eu te contasse o começo da história ?\n", milisPorChar);
+			digita("1. SIM\n" 
+					+ "2. NÃO\n"
+					+ "3. Voltar ao Menu\n\n", milisPorChar);
+
+			int escolha = entrada.nextInt();
+			switch (escolha) {
+			case 1:
+				prologo();
+				break;
+			case 2:
+				capituloUm();
+				break;
+			case 3:
+				menu();
+				break;
+
+			default:
+				digita("Não entendi o que você quis dizer . . .", milisPorChar);
+				break;
+			}
+		}
+
+	}
+
+	public static void capitulos() throws Exception {
+		
+		while (true) {
+			
+			digita("Qual capitulo você gostaria que eu contasse?\n", milisPorChar);
+			digita("1. Querida encolhi as crianças\n" 
+			+ "2. Procurando Trojan\n"
+			+ "3. Selva de Bytes\n"
+			+ "4. O Poderoso Chefão (Final)\n"
+			+ "5. Voltar ao Menu\n\n", milisPorChar);
+
+			int escolha = entrada.nextInt();
+			switch (escolha) {
+			case 1:
+				capituloUm();
+				break;
+			case 2:
+				//capituloDois
+				break;
+			case 3:
+				capituloTres();
+				break;
+			case 4:
+				capituloQuatro();
+				break;
+			case 5:
+				menu();
+				break;
+
+			default:
+				digita("Não entendi o que você quis dizer . . .", milisPorChar);
+				break;
+			}
+		}
+
 
 	}
 
@@ -99,7 +218,7 @@ public class TrojanRPG {
 				digita("Alterado para devagar!\n", milisPorChar);
 				break;
 			case 5:
-				digita("Saindo das opções...\n", milisPorChar);
+				digita("\n\n", milisPorChar);
 				menu();
 				break;
 
@@ -270,6 +389,9 @@ public class TrojanRPG {
 	// Metodos dos Capitulos
 
 	public static void prologo() throws Exception {
+		
+		digita("\nPROLOGO\n\n", milisPorChar);
+		
 		digita("23 de Março de 2020. Um dia que eu achava ser mais um dia comum, ficará pra sempre em minhas lembranças.\n"
 				+ "Mas, para contar o que houve, preciso primeiro me apresentar.\n", milisPorChar);
 		digita("Meu nome é Lucas, um adolescente de 14 anos que sempre foi muito interessado em tecnologia\n"
@@ -315,11 +437,9 @@ public class TrojanRPG {
 		digita("\r\n"
 				+ "Percebi que talvez deveria ter lido os termos de uso, e quando menos esperava meu computador\ncomeçou a eletrizar e como um passe de mágica tudo ficou escuro.\n\n\n",
 				milisPorChar);
-		
 
 		capituloUm();
-		
-		
+
 	}
 
 	public static void capituloUm() throws Exception {
@@ -382,8 +502,6 @@ public class TrojanRPG {
 				+ "– Disse o policial que agora estava sentindo tristeza lembrando de seus amigos e familiares mortos.\n"
 				+ "- Bom... Não devemos viver do passado. – disse ele – Somente VOCÊ pode nos salvar.\n"
 				+ "Só você pode desinstalar esse vírus na PORRADA.\n\n", milisPorChar);
-		
-		
 
 	}
 
@@ -420,6 +538,8 @@ public class TrojanRPG {
 	}
 
 	public static void capituloQuatro() throws Exception {
+		
+		digita("Capítulo 4 – O Poderoso Chefão (Final)\n\n\n", milisPorChar);
 		digita("Enquanto estávamos nos esgueirando por entre os prédios e casas, fiquei pensando como seria se não tivesse \n"
 				+ "baixado aquele vírus. Talvez estaria tranquilo em casa comendo salgadinho e tomando refrigerante enquanto \n"
 				+ "assistia algum vídeo no Youtube.\n\n", milisPorChar);
@@ -574,8 +694,8 @@ public class TrojanRPG {
 					+ "%%              |        |              %%\n" + "%%              |        |              %%\n"
 					+ "%%              |        |              %%\n" + "%%              |        |              %%\n"
 					+ "%%              [________]              %%\n" + "%%                                      %%\n"
-					+ "%%                                      %%\r\n" + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n",
-					0);
+					+ "%%                                      %%\r\n"
+					+ "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n", 0);
 			digita("Segurei ela firme e bati em sua cabeça, ele tonteou e caiu para trás. Aproveitei para procurar \n"
 					+ "alguma coisa que eu pudesse me armar. Estava respirando forte. Mas visão dele caído no chão me deu motivação.\n\n",
 					milisPorChar);
@@ -691,47 +811,41 @@ public class TrojanRPG {
 
 				+ "Fui até lá e a senha estava escrita em decimal do lado do cofre. Porém, o cofre precisava de uma senha em hexadecimal.\n\n",
 				milisPorChar);
-		
-		//DESAFIO
-		int saida=0;
-		do{ 
-			digita("A senha é TROJAN escrito em Hexadecimal\n\n"
-		
-				+ "escolha a alternativa que corresponde TROJAN em hexadecimal:\n\n", milisPorChar);
-		if (embaralhaEEscolheQuatroAlternativas(new String[] {
-				"54524F4A414E", 
-				"597A4G4A6D2A1", 
-				"A1D4E533HF1", 
-				"A1D8E9A6S1F1"
-				}, 0)) {
-					
-		//acertou
-			
 
-		digita("- Consegui! – dei um grito que todos puderam ouvir.\n"
-				+ "Quando olhei para trás tinha três policiais com caras de assustados e armas em punho me olhando.\n"
-				+ "E o Alberto veio logo em seguida.\n" + "E aí?! Será que está aí?!\n"
-				+ "Procurei dentro do cofre, mas só encontrei papelada,\n"
-				+ "algumas permissões daquelas que damos aos softwares sem nem vermos durante a instalação.\n"
-				+ "Dentre algumas delas estava até a do Trojan.	Mas, nada da permissão do administrador...\n\n"
-				+ "Quando eu falei sobre a permissão em voz alta, um dos policiais mais velhos disse:\n"
-				+ "- Por que vocês não pedem direto para o Administrador?!\n"
-				+ "Ele pode até ter sido corrompido pelo Trojan, mas ele pode te dar a permissão se gostar de você.\n"
-				+ "Ele ainda vive em sua empresa.", milisPorChar);
-		saida = 1;
-		
-		}else {
-			digita("\nVocê errou !!! tente novamente:\n", milisPorChar);			
-		}
-		
-		}while(saida==0);
-		
+		// DESAFIO
+		int saida = 0;
+		do {
+			digita("A senha é TROJAN escrito em Hexadecimal\n\n"
+
+					+ "escolha a alternativa que corresponde TROJAN em hexadecimal:\n\n", milisPorChar);
+			if (embaralhaEEscolheQuatroAlternativas(
+					new String[] { "54524F4A414E", "597A4G4A6D2A1", "A1D4E533HF1", "A1D8E9A6S1F1" }, 0)) {
+
+				// acertou
+
+				digita("- Consegui! – dei um grito que todos puderam ouvir.\n"
+						+ "Quando olhei para trás tinha três policiais com caras de assustados e armas em punho me olhando.\n"
+						+ "E o Alberto veio logo em seguida.\n" + "E aí?! Será que está aí?!\n"
+						+ "Procurei dentro do cofre, mas só encontrei papelada,\n"
+						+ "algumas permissões daquelas que damos aos softwares sem nem vermos durante a instalação.\n"
+						+ "Dentre algumas delas estava até a do Trojan.	Mas, nada da permissão do administrador...\n\n"
+						+ "Quando eu falei sobre a permissão em voz alta, um dos policiais mais velhos disse:\n"
+						+ "- Por que vocês não pedem direto para o Administrador?!\n"
+						+ "Ele pode até ter sido corrompido pelo Trojan, mas ele pode te dar a permissão se gostar de você.\n"
+						+ "Ele ainda vive em sua empresa.", milisPorChar);
+				saida = 1;
+
+			} else {
+				digita("\nVocê errou !!! tente novamente:\n", milisPorChar);
+			}
+
+		} while (saida == 0);
+
 		digita("\n- Aquela escrita “B. Rain”! – apontando para a janela.\n", milisPorChar);
 		// ENTRAR NA B RAIN
 
 		capituloTresBRain();
-		
-		
+
 	}
 
 	public static void capituloTresBanco() throws Exception {
@@ -760,8 +874,9 @@ public class TrojanRPG {
 		do {
 			digita("A senha é TROJAN escrito em Hexadecimal\n\n"
 					+ "escolha a alternativa que corresponde TROJAN em hexadecimal:\n\n", milisPorChar);
-			
-			if (embaralhaEEscolheQuatroAlternativas(new String[] { "54524F4A414E", "597A4G4A6D2A1", "A1D4E533HF1", "A1D8E9A6S1F1" }, 0)) {
+
+			if (embaralhaEEscolheQuatroAlternativas(
+					new String[] { "54524F4A414E", "597A4G4A6D2A1", "A1D4E533HF1", "A1D8E9A6S1F1" }, 0)) {
 				// ACERTOU
 				digita("\n- Consegui! – disse eu, já entrando naquele enorme cofre.\n"
 						+ "Tinha poucos itens dentro, informações pessoais, fotos, vídeos...\n"
@@ -835,8 +950,7 @@ public class TrojanRPG {
 				+ "Mas ele entendeu o que tudo aquilo significava e ficou mais motivado.\n"
 				+ "Ele sabia que a hora estava chegando. Saímos do prédio com determinação.\n"
 				+ "E fomos de encontro a Prefeitura!!", milisPorChar);
-		
-		
+
 		capituloQuatro();
 
 	}
