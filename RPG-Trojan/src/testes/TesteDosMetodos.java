@@ -11,18 +11,22 @@ public class TesteDosMetodos {
 	static Scanner entrada = new Scanner(System.in);
 	static Random random = new Random();
 	
-	static long milisPorChar = 20; //valor padrao È 65;
+	static long milisPorChar = 20; //valor padrao ÔøΩ 65;
 	
 	
 	
 	public static void main(String[] args) throws Exception {
 		
-		/*
-		 * if(embaralhaEEscolheQuatroAlternativas(new String[] { "Joao", "Maria",
-		 * "Jose", "Diego" }, 1)) { System.out.println("parabens"); }else {
-		 * System.out.println("errou"); }
-		 */
+		//codigo abaixo testa a sa√≠da do metodo embaralhaEEscolheQuatroAlternativas
+		  if(embaralhaEEscolheQuatroAlternativas(new String[] { "Joao", "Maria","Jose", "Diego" }, 1)) { 
+			  System.out.println("parabens"); 
+		  }else {
+			  System.out.println("errou"); 
+		  }
+		 
 		
+		
+		//ideia abaixo foi retirada do jogo final...
 		int totalTiradoNosDados = 0;
 		int nDeJogadasDoDado = 3;
 		//jogar os dados
@@ -92,7 +96,7 @@ public class TesteDosMetodos {
 
 
 		default:
-			digita("Alternativa n„o existe!", milisPorChar);;
+			digita("Alternativa n√£o existe!", milisPorChar);;
 			break;
 		}
 		}while(!sai);
