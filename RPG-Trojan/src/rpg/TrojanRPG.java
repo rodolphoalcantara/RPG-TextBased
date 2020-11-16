@@ -24,6 +24,7 @@ public class TrojanRPG {
 		// menu();
 		//capituloQuatro();
 		// prologo();
+<<<<<<< Updated upstream
 		// capituloUm();
 		 //capituloTres();
 		// capituloTresDelegacia();
@@ -49,6 +50,10 @@ public class TrojanRPG {
 		
 		digita("  \n\n", 1000);
 		menu();
+=======
+		//capituloUm();
+		capituloDois();
+>>>>>>> Stashed changes
 	}
 	
 
@@ -272,6 +277,7 @@ public class TrojanRPG {
 	public static void perdeVida(int hit) throws Exception {
 		if (hit >= vida) {
 			System.out.println("GameOver!\n\n");
+			gameover();
 			// FIM DO JOGO//
 		} else {
 			vida = vida - hit;
@@ -558,7 +564,149 @@ public class TrojanRPG {
 		}
 		} while (repetir);
 	}
+	
+	public static void capituloDois() throws Exception {
+		
+		digita("Depois de conversarmos, o Delegado Alberto Vast - foi assim que ele se identificou - me contou sobre tudo que aconteceu.\n"
+				+ "Ao que me parece nos poucos segundos que demorou para instalar e eu aparecer neste mundo, se passou anos de dor e sofrimento.\n\n"
+				+ "Cada palavra que eu ouvia ia me deixando com mais raiva e minha vontade de exterminar o TROJAN só ia aumentando.\n\n"
+				+ "Foi aí que o Alberto me contou seu plano, fazer com que os capangas abrissem o bico.\n\n"
+				+ "Decidimos ir a uma casa noturna onde um grupo de capangas se encontrava para beber e jogar papo fora.\n"
+				+ "Porém, quando chegamos na fachada do estabelecimento vimos que não podíamos somente entrar.\n\n"
+				+ "Identifiquei algo que parecia ser um circuito e que a saída deveria ser a resposta para destrancar a porta e poder prosseguir.\n"
+				+ " Procurei em minhas lembranças as aulas de circuitos lógicos que eu vi no Youtube.\n\n"
+				+ "Algo veio em minha mente e então fui em direção da “fechadura”.\n\n", milisPorChar);
+		
+		digita("\nDESAFIO: \n\n", milisPorChar);
 
+		digita("No circuito apresentado, que possui tres entradas — A, B e C — e uma saída f (A, B, C),\n" + 
+				"qual opção apresenta uma expressão lógica equivalente à função f (A, B, C)?\n\n", milisPorChar);
+		visualizaImagem("excap2.png");
+		if (embaralhaEEscolheQuatroAlternativas(
+				new String[] {"A'B+BC", "A'B+B'C", "AB+BC'", "AB'+B'C"}, 0)) {
+			// acertou
+			digita("\nUma “voz-porteiro”, que parecia sair da fechadura, me diz:\n" + 
+					"-Você pode prosseguir desta vez, porém aqui não é seu lugar...\n" + 
+					"Antes que eu pudesse entrar no estabelecimento, tropeço em um byte mal colocado e caio no chão, derrubando algumas latas e fazendo barulho.\n", milisPorChar);
+				}
+		//errou
+		else { 
+			digita("\nUma “voz-porteiro”, que parecia sair da fechadura, me diz:\n" + 
+					"- Você errou a senha. Errar mais 2 vezes irá soar o alarme.\n", milisPorChar);
+			
+			if (embaralhaEEscolheQuatroAlternativas(
+					new String[] {"A'B+BC", "A'B+B'C", "AB+BC'", "AB'+B'C"}, 0)) {
+				// acertou
+				digita("\nUma “voz-porteiro”, que parecia sair da fechadura, me diz:\n" + 
+						"-Você pode prosseguir desta vez, porém aqui não é seu lugar...\n" + 
+						"Antes que eu pudesse entrar no estabelecimento, tropeço em um byte mal colocado e caio no chão, derrubando algumas latas e fazendo barulho.\n", milisPorChar);
+					}
+			//errou
+			else { 
+				digita("\nUma “voz-porteiro”, que parecia sair da fechadura, me diz:\n" + 
+						"- Você errou a senha. Errar mais 1 vezes irá soar o alarme.\n" +
+						"Porem ao ouvir a voz o circuito se modificou\n\n", milisPorChar);
+				visualizaImagem("excap2.1.png");
+				
+				if (embaralhaEEscolheQuatroAlternativas(
+						new String[] {"ABC (A+D)", "ABC+(A+D)", "ABC'(A+D)'", "'A'BC+(A+D)'"}, 0)) {
+					// acertou
+					digita("\nUma “voz-porteiro”, que parecia sair da fechadura, me diz:\n" + 
+							"-Você pode prosseguir desta vez, porém aqui não é seu lugar...\n" + 
+							"Antes que eu pudesse entrar no estabelecimento, tropeço em um byte mal colocado e caio no chão, derrubando algumas latas e fazendo barulho.\n", milisPorChar);
+						}
+				//errou
+				else { 
+					digita("\nA “voz-porteiro” grita:\n" + 
+							"- Tentativas esgotadas. INTRUSO. INTRUSO. INTRUSO...\n" + 
+							"Enquanto o barulho percorre o estabelecimento, o porteiro lança uma descarga de choque que me lança ao chão.\n", milisPorChar);
+					perdeVida(1);
+				}
+			}
+		}
+		digita("Antes que eu pudesse me levantar um grupo de vírus, capangas de Trojan, vinha em minha direção.\n"
+				+ "Para minha sorte eles estavam meio “bugados” por conta das bebidas virtuais.\n"
+				+ " Suas funções estavam alteradas e eu sentia que, mesmo em menor número, eu e meu parceiro podíamos ganhar deles.\n\n"
+				+ "Quando eles me percebem, tentando me levantar desajeitadamente, por entre as garrafas vazias que eu acabara de derrubar.\n"
+				+ "O que parecia ser o líder do bando gritou:\n" + 
+				"- É o Rei Lucas, aquele que o chefe quer. PEGUEM ELEEE!!!\n\n", milisPorChar);
+		//ponto decisivo na historia
+		
+		digita("\nDESAFIO: \n\n", milisPorChar);
+
+		digita("Observe a porta logica e atraves da tabela verdade responda\n\n", milisPorChar);
+		visualizaImagem("excap2.2.png");
+		if (embaralhaEEscolheQuatroAlternativas(
+				new String[] {"A=0|B=1|S=1", "A=1|B=0|S=0", "A=1|B=1|S=1", "A=0|B=0|S=1"}, 0)) {
+			// acertou
+			digita("\nO primeiro veio em minha direção, mesmo pisando em falso por ter acabado de levantar, consegui desviar de seus ataques.\n"
+					+ "Por estar mais bêbado que os demais ele se desequilibrou caiu no chão e desmaiou.\n"
+					+ "Vieram mais dois em nossa direção.\n"
+					+ "Vendo o primeiro desmaiado fez com que ficassem com mais raiva e viessem para cima da gente.\n"
+					+ "Mas por sorte com a ajuda do meu parceiro, conseguimos quebrar a cara dos capangas.\n\n", milisPorChar);
+				}
+		//errou
+		else { 
+			digita("\nO primeiro veio em minha direção, ainda estava me levantando e mal tive tempo de me esquivar\n"
+					+ "já esperava receber o primeiro soco, mas quando olhei pra cima vi que meu parceiro derrubou o primeiro antes que eu pudesse levantar.\n" 
+					+ "Vieram mais dois em nossa direção.\n"
+					+ "Vendo o primeiro desmaiado fez com que ficassem com mais raiva e viessem para cima da gente.\n"
+					+ "Congelei na hora vendo aquela situação, porém nem eu e nem meu parceiro conseguimos imobiliza-los. Caímos no chão!\n\n", milisPorChar);
+			// proximo desafio.
+			
+			digita("\nDESAFIO: \n\n", milisPorChar);
+
+			digita("Observe a porta logica e atraves da tabela verdade responda\n\n", milisPorChar);
+			visualizaImagem("excap2.3.png");
+			if (embaralhaEEscolheQuatroAlternativas(
+					new String[] {"A=1|B=0|S=1", "A=0|B=1|S=0", "A=1|B=1|S=1", "A=0|B=0|S=0"}, 0)) {
+				// acertou
+				digita("\nDessa vez foi o chefe do bando que veio em nossa direção, ele era mais forte e estava com uma garrafa de cerveja quebrada na mão.\n"
+						+ "A luta durou alguns minutos.\n"
+						+ "Eu e meu parceiro lutamos lado a lado parecendo o japonês e o americano da Hora do Rush.\n"
+						+ "Apos intensos minutos de briga, conseguimos derrota-lo mas com muita dificuldade.\n", milisPorChar);
+					}
+			//errou
+			else { 
+				digita("\nDessa vez foi o chefe do bando que veio em nossa direção, ele era mais forte e estava com uma garrafa de cerveja quebrada na mão.\n"
+						+ "A luta durou alguns minutos.\n"
+						+ "Não cedemos até o ultimo minuto, porém ele era mais forte e acabou com a nossa raça.\n\n"
+						+ "Mesmo depois de muito esforço, não conseguimos sair dessa cilada. Nos vimos cercados de capangas que saiam de todos os lados.\n\n", milisPorChar);
+						gameover();
+						agradecimentos();
+			}
+		}
+		// proximo desafio.
+		digita("\nDESAFIO: \n\n", milisPorChar);
+
+		digita("Observe a porta logica e atraves da tabela verdade responda\n\n", milisPorChar);
+		visualizaImagem("excap2.3.png");
+		if (embaralhaEEscolheQuatroAlternativas(
+				new String[] {"A=1|B=0|S=1", "A=0|B=1|S=0", "A=1|B=1|S=1", "A=0|B=0|S=0"}, 0)) {
+			// acertou
+			digita("\nDessa vez foi o chefe do bando que veio em nossa direção, ele era mais forte e estava com uma garrafa de cerveja quebrada na mão.\n"
+					+ "A luta durou alguns minutos.\n"
+					+ "Eu e meu parceiro lutamos lado a lado parecendo o japonês e o americano da Hora do Rush.\n"
+					+ "Apos intensos minutos de briga, conseguimos derrota-lo mas com muita dificuldade.\n", milisPorChar);
+				}
+		//errou
+		else { 
+			digita("\nDessa vez foi o chefe do bando que veio em nossa direção, ele era mais forte e estava com uma garrafa de cerveja quebrada na mão.\n"
+					+ "A luta durou alguns minutos.\n"
+					+ "Não cedemos até o ultimo minuto, porém ele era mais forte.\n\n"
+					+ "Então decidimos fugir.Ao voltarmos ao local havistamos dois capangas tentando ajudar um terceiro.\n"
+					+ "Eles vieram na nossa direção correndo e me acertou um soco.\n\n", milisPorChar);
+		}
+
+		digita ("\nMesmo depois de alguns problemas que tivemos na situação conseguimos sair por cima.\n"
+				+ "O chefe do bando conseguiu fugir, mas conseguimos capturar o capanga bêbado que desmaiou.\n\n"
+				+ "Esperamos o capanga acordar, sua identificação era: Spyware. Ele era um criminoso que – por sorte nossa – tinha informações importantíssimas.\n"
+				+ "Ele nos disse onde o chefe dele estava, mas pra isso nós deveríamos conseguir uma chave de acesso antes...\n"
+				+ "A permissão do Administrador.\n\n", milisPorChar);
+		
+	}
+
+	
 	public static void capituloQuatro() throws Exception {
 		
 		digita("CapÃ­tulo 4 â€“ O Poderoso ChefÃ£o (Final)\n\n\n", milisPorChar);
@@ -1032,5 +1180,23 @@ public class TrojanRPG {
 
 		menu();
 
+	}
+	
+	public static void gameover() throws Exception{
+		
+		digita("Minha visão estava turva. Ela começou a se fechar.\n" 
+				+ "Toda a minha vida estava passando por meus olhos.\n" 
+				+ "Não conseguia gritar e nem chorar.\n" 
+				+ "Só me lembrava de meus pais. \n" 
+				+ "Foi então que morri.\n" 
+				+ "Eu sou apenas um resquício de alma humana. Meu corpo se transformou em um vírus e está na companhia de Trojan.\n"
+				+ "Minha alma vaga pelos computadores de outras pessoas para contar minha história.\n" 
+				+ "Trojan está livre pela internet.\n" 
+				+ "O que ele fez comigo fará com outras pessoas.\n"
+				+ "Você deixará isso acontecer?\n", milisPorChar);
+		
+		menu();
+		
+		
 	}
 }
