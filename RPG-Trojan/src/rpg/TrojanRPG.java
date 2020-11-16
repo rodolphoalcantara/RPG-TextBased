@@ -49,6 +49,10 @@ public class TrojanRPG {
 		
 		digita("  \n\n", 1000);
 		menu();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5aadb55e60f48504bf9e286048213bcdde33cd5c
 	}
 	
 
@@ -169,7 +173,7 @@ public class TrojanRPG {
 				capituloUm();
 				break;
 			case 2:
-				//capituloDois
+				capituloDois();
 				break;
 			case 3:
 				capituloTres();
@@ -504,6 +508,8 @@ public class TrojanRPG {
 				+ "– Disse o policial que agora estava sentindo tristeza lembrando de seus amigos e familiares mortos.\n"
 				+ "- Bom... Não devemos viver do passado. – disse ele – Somente VOCÊ pode nos salvar.\n"
 				+ "Só você pode desinstalar esse vírus na PORRADA.\n\n", milisPorChar);
+		
+		capituloDois();
 
 	}
 
@@ -643,10 +649,17 @@ public class TrojanRPG {
 		//errou
 		else { 
 			digita("\nO primeiro veio em minha dire��o, ainda estava me levantando e mal tive tempo de me esquivar\n"
+<<<<<<< HEAD
 					+ "ja esperava receber o primeiro soco, mas quando olhei pra cima vi que meu parceiro derrubou o primeiro antes que eu pudesse levantar.\n" 
 					+ "Vieram mais dois em nossa direção.\n"
 					+ "Vendo o primeiro desmaiado fez com que ficassem com mais raiva e viessem para cima da gente.\n"
 					+ "Congelei na hora vendo aquela situa��o, por�m nem eu e nem meu parceiro conseguimos imobiliza-los. Ca�mos no chão!\n\n", milisPorChar);
+=======
+					+ "j� esperava receber o primeiro soco, mas quando olhei pra cima vi que meu parceiro derrubou o primeiro antes que eu pudesse levantar.\n" 
+					+ "Vieram mais dois em nossa dire��o.\n"
+					+ "Vendo o primeiro desmaiado fez com que ficassem com mais raiva e viessem para cima da gente.\n"
+					+ "Congelei na hora vendo aquela situa��o, por�m nem eu e nem meu parceiro conseguimos imobiliza-los. Ca�mos no ch�o!\n\n", milisPorChar);
+>>>>>>> 5aadb55e60f48504bf9e286048213bcdde33cd5c
 			// proximo desafio.
 			
 			digita("\nDESAFIO: \n\n", milisPorChar);
@@ -656,7 +669,11 @@ public class TrojanRPG {
 			if (embaralhaEEscolheQuatroAlternativas(
 					new String[] {"A=1|B=0|S=1", "A=0|B=1|S=0", "A=1|B=1|S=1", "A=0|B=0|S=0"}, 0)) {
 				// acertou
+<<<<<<< HEAD
 				digita("\nDessa vez foi o chefe do bando que veio em nossa direção, ele era mais forte e estava com uma garrafa de cerveja quebrada na mão.\n"
+=======
+				digita("\nDessa vez foi o chefe do bando que veio em nossa dire��o, ele era mais forte e estava com uma garrafa de cerveja quebrada na m�o.\n"
+>>>>>>> 5aadb55e60f48504bf9e286048213bcdde33cd5c
 						+ "A luta durou alguns minutos.\n"
 						+ "Eu e meu parceiro lutamos lado a lado parecendo o japon�s e o americano da Hora do Rush.\n"
 						+ "Apos intensos minutos de briga, conseguimos derrota-lo mas com muita dificuldade.\n", milisPorChar);
@@ -698,6 +715,11 @@ public class TrojanRPG {
 				+ "Esperamos o capanga acordar, sua identifica��o era: Spyware. Ele era um criminoso que � por sorte nossa � tinha informa��es important�ssimas.\n"
 				+ "Ele nos disse onde o chefe dele estava, mas pra isso n�s dever�amos conseguir uma chave de acesso antes...\n"
 				+ "A permiss�o do Administrador.\n\n", milisPorChar);
+<<<<<<< HEAD
+=======
+		
+		capituloTres();
+>>>>>>> 5aadb55e60f48504bf9e286048213bcdde33cd5c
 		
 	}
 
