@@ -19,39 +19,36 @@ public class TrojanRPG {
 
 		inicioDoJogo();
 
-		//testes:
-		//menu();
+		// testes:
+		//gameover();
 		// menu();
-		//capituloQuatro();
+		// capituloQuatro();
 		// prologo();
 		// capituloUm();
-		//capituloTres();
+		// capituloTres();
 		// capituloTresDelegacia();
 		// capituloTresBanco();
 		// capituloTresBRain();
 	}
-	
-	
+
 	public static void inicioDoJogo() throws Exception {
-		digita("Rodolpho, Felipe e Gessione\n"
-				+ "Apresentam: \n\n", 120);
-		
-		digita("###############################################################################\n" + 
-				"##                                                                           ##\n" + 
-				"##  .___________..______        ______          __       ___      .__  __.   ##\n" + 
-				"##  |           ||   _  \\      /  __  \\        |  |     /   \\     |  \\ |  |  ## \n" + 
-				"##  `---|  |----`|  |_)  |    |  |  |  |       |  |    /  ^  \\    |   \\|  |  ##\n" + 
-				"##      |  |     |      /     |  |  |  | .--.  |  |   /  /_\\  \\   |  . `  |  ##\n" + 
-				"##      |  |     |  |\\  \\----.|  `--'  | |  `--'  |  /  _____  \\  |  |\\   |  ##\n" + 
-				"##      |__|     | _| `._____| \\______/   \\______/  /__/     \\__\\ |__| \\__|  ##\n" + 
-				"##                                                                           ##\n" + 
-				"###############################################################################\n\n\n", 0);
-		
+		digita("Rodolpho, Felipe e Gessione\n" + "Apresentam: \n\n", 120);
+
+		digita("###############################################################################\n"
+				+ "##                                                                           ##\n"
+				+ "##  .___________..______        ______          __       ___      .__  __.   ##\n"
+				+ "##  |           ||   _  \\      /  __  \\        |  |     /   \\     |  \\ |  |  ## \n"
+				+ "##  `---|  |----`|  |_)  |    |  |  |  |       |  |    /  ^  \\    |   \\|  |  ##\n"
+				+ "##      |  |     |      /     |  |  |  | .--.  |  |   /  /_\\  \\   |  . `  |  ##\n"
+				+ "##      |  |     |  |\\  \\----.|  `--'  | |  `--'  |  /  _____  \\  |  |\\   |  ##\n"
+				+ "##      |__|     | _| `._____| \\______/   \\______/  /__/     \\__\\ |__| \\__|  ##\n"
+				+ "##                                                                           ##\n"
+				+ "###############################################################################\n\n\n", 0);
+
 		digita("  \n\n", 1000);
 		menu();
 
 	}
-	
 
 	// métodos do jogo
 
@@ -97,13 +94,11 @@ public class TrojanRPG {
 
 	}
 
-	//escolhe o modo de jogo: Normal(do inicio) e capitulos(escolher um)
+	// escolhe o modo de jogo: Normal(do inicio) e capitulos(escolher um)
 	public static void modoDeJogo() throws Exception {
 		while (true) {
 			digita("Escolha o modo de jogo: \n", milisPorChar);
-			digita("1. Normal\n" 
-					+ "2. Capítulos\n"
-					+ "3. Sair\n\n", milisPorChar);
+			digita("1. Normal\n" + "2. Capítulos\n" + "3. Sair\n\n", milisPorChar);
 
 			int escolha = entrada.nextInt();
 			switch (escolha) {
@@ -129,9 +124,7 @@ public class TrojanRPG {
 
 		while (true) {
 			digita("Você gostaria que eu te contasse o começo da história ?\n", milisPorChar);
-			digita("1. SIM\n" 
-					+ "2. NÃO\n"
-					+ "3. Voltar ao Menu\n\n", milisPorChar);
+			digita("1. SIM\n" + "2. NÃO\n" + "3. Voltar ao Menu\n\n", milisPorChar);
 
 			int escolha = entrada.nextInt();
 			switch (escolha) {
@@ -154,15 +147,12 @@ public class TrojanRPG {
 	}
 
 	public static void capitulos() throws Exception {
-		
+
 		while (true) {
-			
+
 			digita("Qual capitulo você gostaria que eu contasse?\n", milisPorChar);
-			digita("1. Querida encolhi as crianças\n" 
-			+ "2. Procurando Trojan\n"
-			+ "3. Selva de Bytes\n"
-			+ "4. O Poderoso Chefão (Final)\n"
-			+ "5. Voltar ao Menu\n\n", milisPorChar);
+			digita("1. Querida encolhi as crianças\n" + "2. Procurando Trojan\n" + "3. Selva de Bytes\n"
+					+ "4. O Poderoso Chefão (Final)\n" + "5. Voltar ao Menu\n\n", milisPorChar);
 
 			int escolha = entrada.nextInt();
 			switch (escolha) {
@@ -187,7 +177,6 @@ public class TrojanRPG {
 				break;
 			}
 		}
-
 
 	}
 
@@ -242,7 +231,7 @@ public class TrojanRPG {
 				int aceita = entrada.nextInt();
 				switch (aceita) {
 				case 1:
-					digita("Vamos voltar para o menu!\n", milisPorChar);
+					digita("Vamos voltar para o menu!\n\n\n", milisPorChar);
 					aceitou = true;
 					sair = true;
 					break;
@@ -392,25 +381,25 @@ public class TrojanRPG {
 	// Metodos dos Capitulos
 
 	public static void prologo() throws Exception {
-		
+
 		digita("\nPROLOGO\n\n", milisPorChar);
-		
+
 		digita("23 de Março de 2020. Um dia que eu achava ser mais um dia comum, ficará pra sempre em minhas lembranças.\n"
-				+ "Mas, para contar o que houve, preciso primeiro me apresentar.\n", milisPorChar);
-		digita("Meu nome é Lucas, um adolescente de 14 anos que sempre foi muito interessado em tecnologia\n"
+				+ "Mas, para contar o que houve, preciso primeiro me apresentar.\n\n", milisPorChar);
+		digita("Meu nome é Lucas, um adolescente de 14 anos que sempre foi muito interessado em tecnologi.a\n"
 				+ "Nunca fui bem nas matérias escolares, porém, o que eu mais gostava de fazer depois das aulas era descobrir coisas novas na internet,\n"
-				+ "e talvez tenha sido essa minha curiosidade que me levou a tudo isso\n", milisPorChar);
+				+ "e talvez tenha sido essa minha curiosidade que me levou a tudo isso\n\n", milisPorChar);
 		digita("Já havia passado, mais ou menos, duas semanas desde a suspenção das aulas por conta da quarentena de Covid19\n"
-				+ "Estava eu, como de costume, com vinte abas abertas no meu navegador, aprendendo coisas novas\n"
-				+ "A quarentena me deixou com muito tempo livre, e eu estava usando este tempo para aprender mais coisas sobre programação e computação.\n",
+				+ "Estava eu, como de costume, com vinte abas abertas no meu navegador, aprendendo coisas novas.\n"
+				+ "A quarentena me deixou com muito tempo livre, e eu estava usando este tempo para aprender mais coisas sobre programação e computação.\n\n",
 				milisPorChar);
 		digita("Uma dessas abas era sobre uma matéria, em um site comum de notícias Tech, que falava sobre a DeepWeb.\n"
-				+ "Fiquei fascinado por aquilo e resolvi investigar.\n", milisPorChar);
+				+ "Fiquei fascinado por aquilo e resolvi investigar.\n\n", milisPorChar);
 		digita("Após seguir todos os preparativos, resolvi entrar em um fórum qualquer e me deparei com um usuário,\n"
 				+ "chamado Jon Art, que prometia um Aplicativo capaz de resolver todos meus problemas.\n"
-				+ "Ele iria ser uma ferramenta que me possibilitaria elevar meu conhecimento\n", milisPorChar);
+				+ "Ele iria ser uma ferramenta que me possibilitaria elevar meu conhecimento\n\n", milisPorChar);
 		digita("Achei aquilo muito estranho, parecia que tinha sido feito pra mim,\n"
-				+ "porém pensei comigo mesmo: - Que mal tem?!\n", milisPorChar);
+				+ "porém pensei comigo mesmo: - Que mal tem?!\n\n", milisPorChar);
 		digita("E não percebi que só tinha mal nisso.\n\n"
 				+ "Minha inocência me fez baixar o arquivo e instalar em meu computador\n"
 				+ "Quando o loading da instalação teve fim, o computador começou a se comportar de um jeito estranho.\n\n",
@@ -424,7 +413,7 @@ public class TrojanRPG {
 				+ "##                       by                         ##\r\n"
 				+ "##                    JON  ART                      ##\r\n"
 				+ "##                                                  ##\r\n"
-				+ "######################################################\n\n", 10);
+				+ "######################################################\n\n", 5);
 
 		digita("De repente, aconteceu uma interferência e o nome do criador começou a mudar, e se mostrou algo totalmente diferente:\n\n",
 				milisPorChar);
@@ -435,7 +424,7 @@ public class TrojanRPG {
 				+ "##                       by                         ##\r\n"
 				+ "##                     TROJAN                       ##\r\n"
 				+ "##                                                  ##\r\n"
-				+ "######################################################\n\n", 10);
+				+ "######################################################\n\n", 5);
 
 		digita("\r\n"
 				+ "Percebi que talvez deveria ter lido os termos de uso, e quando menos esperava meu computador\ncomeçou a eletrizar e como um passe de mágica tudo ficou escuro.\n\n\n",
@@ -451,21 +440,21 @@ public class TrojanRPG {
 
 		digita("Quando abri meus olhos me vi em algum lugar que lembrava uma cidade, porém, de um jeito diferente\n"
 				+ "Era tudo preto, como uma tela de um terminal, e as linhas brancas formavam prédios e avenidas\n"
-				+ "linda cidade um dia, contudo, com a instalação do SoulEater,\n"
-				+ "em menos de segundos a cidade tinha se transformado em ruínas\n" + "um cenário pós-apocalíptico.\n",
+				+ "Deveria ter sido uma linda cidade um dia, contudo, com a instalação do SoulEater,\n"
+				+ "em menos de segundos a cidade tinha se transformado em ruínas\n" + "um cenário pós-apocalíptico.\n\n",
 				milisPorChar);
 
 		digita("Descobri que estava em meu computador, nos altos dos prédios destruídos\n"
 				+ "algo como outdoors mostravam memes que tinha salvo há alguns dias.\n"
-				+ "E em minha visão aparecia algo como um contador de vidas, como em um jogo de vídeo game.\n",
+				+ "E em minha visão aparecia algo como um contador de vidas, como em um jogo de vídeo game.\n\n",
 				milisPorChar);
 
 		digita("Fiquei olhando para aqueles vídeos e não percebi que um grupo de malwares estavam vindo em minha direção.\nEram capangas do TROJAN"
-				+ " e estavam tentando me levar a força para seu chefe.\n", milisPorChar);
+				+ " e estavam tentando me levar a força para seu chefe.\n\n", milisPorChar);
 
 		digita("\nDESAFIO: \n\n", milisPorChar);
 
-		digita("Na Algebra Booleana And e Or são representados com quais sinais matematica?\n\n", milisPorChar);
+		digita("Na Algebra Booleana AND e OR são representados com quais sinais matemática?\n\n", milisPorChar);
 
 		if (embaralhaEEscolheQuatroAlternativas(new String[] { "Multiplicação e Adição", "Subtração e Divisão",
 				"Multiplicação e divisão", "Subtração e Adição" }, 0)) {
@@ -497,22 +486,22 @@ public class TrojanRPG {
 				+ "Apenas pelo seu semblante pude notar um mix de emoções\n"
 				+ "Felicidade, por estar conhecendo seu criador e a pessoa em que todos os moradores do computador admiravam.\n"
 				+ "E Raiva, por descobrir que seu criador havia causado toda aquela destruição e mortes.\n"
-				+ "Porém, mesmo sentindo tudo isso ele sabia que a única pessoa que podia acabar com tudo aquilo era eu.\n"
+				+ "Porém, mesmo sentindo tudo isso ele sabia que a única pessoa que podia acabar com tudo aquilo era eu.\n\n"
 				+ "- Veja, tudo o que aconteceu. Antes, essas ruas eram cheias de bytes andando de um lado pro outro\n"
-				+ "Trafegando informações para onde você solicitava.\n"
+				+ "Trafegando informações para onde você solicitava.\n\n"
 				+ "Víamos que você adorava passar horas no computador e isso nos alegrava.\n"
-				+ "Mas, um dia você resolveu entrar em um fórum e baixar aquele software malicioso \n"
+				+ "Mas, um dia você resolveu entrar em um fórum e baixar aquele software malicioso \n\n"
 				+ "– Disse o policial que agora estava sentindo tristeza lembrando de seus amigos e familiares mortos.\n"
 				+ "- Bom... Não devemos viver do passado. – disse ele – Somente VOCÊ pode nos salvar.\n"
 				+ "Só você pode desinstalar esse vírus na PORRADA.\n\n", milisPorChar);
-		
+
 		capituloDois();
 
 	}
 
 	public static void capituloTres() throws Exception {
 
-		digita("\nCapítulo Três - Selva de Bytes\n\n", milisPorChar);
+		digita("Capítulo Três - Selva de Bytes\n\n", milisPorChar);
 
 		digita("Depois de nos informar onde seu chefe estava e sobre essa tal chave de acesso,\n"
 				+ "o Spyware estava preparando para falar como a gente poderia conseguir a chave.\n"
@@ -537,180 +526,168 @@ public class TrojanRPG {
 				+ "Todas as linhas de código do vírus foram deletadas…\n", milisPorChar);
 		digita("Por um momento me senti aliviado e parece que isso me rendeu um coração a mais.\n\n", milisPorChar);
 		bonusDeVida(1);
-		digita("Paramos e pegamos o mapa da cidade.\r\n" + "- Onde nós deveríamos procurar? – perguntou Alberto.\r\n\n"
-				+ "", milisPorChar);
 		
+		digita("## Você recebeu 1HP ##\n\n", milisPorChar);
+		
+		digita("Paramos e pegamos o mapa da cidade.\n" + "- Onde nós deveríamos procurar? – perguntou Alberto.\n\n"
+				+ "", milisPorChar);
+
 		boolean repetir = false;
 		do {
-		digita("Podemos ir para o Banco ou a delegacia, qual você gostaria de ir:\n", milisPorChar);
-		digita("1. Banco\n",milisPorChar);
-		digita("2. Delegacia\n",milisPorChar);
-		int n1 = entrada.nextInt();
-		
-		switch (n1) {
-		case 1:
-			capituloTresBanco();
-			
-		case 2:
-			capituloTresDelegacia();
-			
-		default:
-			System.out.print("\n Não tem essa opção !!!\n");
-			System.out.print(" Tente novamente\n\n");
-			repetir = true;
-			break;
-		}
+			digita("Podemos ir para o Banco ou a delegacia, qual você gostaria de ir:\n", milisPorChar);
+			digita("1. Banco\n", milisPorChar);
+			digita("2. Delegacia\n", milisPorChar);
+			int n1 = entrada.nextInt();
+
+			switch (n1) {
+			case 1:
+				capituloTresBanco();
+
+			case 2:
+				capituloTresDelegacia();
+
+			default:
+				System.out.print("\n Não tem essa opção !!!\n");
+				System.out.print(" Tente novamente\n\n");
+				repetir = true;
+				break;
+			}
 		} while (repetir);
 	}
-	
+
 	public static void capituloDois() throws Exception {
+
+		digita("Capitulo Dois - Procurando Trojan\n\n", milisPorChar);
 		
 		digita("Depois de conversarmos, o Delegado Alberto Vast - foi assim que ele se identificou - me contou sobre tudo que aconteceu.\n"
 				+ "Ao que me parece nos poucos segundos que demorou para instalar e eu aparecer neste mundo, se passou anos de dor e sofrimento.\n\n"
-				+ "Cada palavra que eu ouvia ia me deixando com mais raiva e minha vontade de exterminar o TROJAN s� ia aumentando.\n\n"
-				+ "Foi a� que o Alberto me contou seu plano, fazer com que os capangas abrissem o bico.\n\n"
+				+ "Cada palavra que eu ouvia ia me deixando com mais raiva e minha vontade de exterminar o TROJAN só ia aumentando.\n\n"
+				+ "Foi aí que o Alberto me contou seu plano, fazer com que os capangas abrissem o bico.\n\n"
 				+ "Decidimos ir a uma casa noturna onde um grupo de capangas se encontrava para beber e jogar papo fora.\n"
-				+ "Por�m, quando chegamos na fachada do estabelecimento vimos que n�o pod�amos somente entrar.\n\n"
-				+ "Identifiquei algo que parecia ser um circuito e que a sa�da deveria ser a resposta para destrancar a porta e poder prosseguir.\n"
-				+ " Procurei em minhas lembran�as as aulas de circuitos l�gicos que eu vi no Youtube.\n\n"
-				+ "Algo veio em minha mente e ent�o fui em dire��o da �fechadura�.\n\n", milisPorChar);
-		
+				+ "Porém, quando chegamos na fachada do estabelecimento vimos que não podíamos somente entrar.\n\n"
+				+ "Identifiquei algo que parecia ser um circuito e que a saída deveria ser a resposta para destrancar a porta e poder prosseguir.\n"
+				+ " Procurei em minhas lembranças as aulas de circuitos lógicos que eu vi no Youtube.\n\n"
+				+ "Algo veio em minha mente e então fui em direção da 'fechadura'.\n\n", milisPorChar);
+
 		digita("\nDESAFIO: \n\n", milisPorChar);
 
-		digita("No circuito apresentado, que possui tres entradas � A, B e C � e uma sa�da f (A, B, C),\n" + 
-				"qual op��o apresenta uma express�o l�gica equivalente � função f (A, B, C)?\n\n", milisPorChar);
+		digita("No circuito apresentado, que possui tres entradas ( A, B e C ) e uma saída f (A, B, C),\n"
+				+ "qual opção apresenta uma expressão lógica equivalente a função f (A, B, C)?\n\n", milisPorChar);
 		visualizaImagem("excap2.png");
-		if (embaralhaEEscolheQuatroAlternativas(
-				new String[] {"A'B+BC", "A'B+B'C", "AB+BC'", "AB'+B'C"}, 0)) {
+		if (embaralhaEEscolheQuatroAlternativas(new String[] { "(A'.B)+(B+C)", "(A.'B)+(B'.C)", "(A'+B)+(B.C)'", "(A+B)' + (B'+C)" }, 0)) {
 			// acertou
-			digita("\nUma �voz-porteiro�, que parecia sair da fechadura, me diz:\n" + 
-					"-Voc� pode prosseguir desta vez, porem aqui não é seu lugar...\n" + 
-					"Antes que eu pudesse entrar no estabelecimento, trope�o em um byte mal colocado e caio no ch�o, derrubando algumas latas e fazendo barulho.\n", milisPorChar);
-				}
-		//errou
-		else { 
-			digita("\nUma �voz-porteiro�, que parecia sair da fechadura, me diz:\n" + 
-					"- Voc� errou a senha. Errar mais 2 vezes ir� soar o alarme.\n", milisPorChar);
-			
-			if (embaralhaEEscolheQuatroAlternativas(
-					new String[] {"A'B+BC", "A'B+B'C", "AB+BC'", "AB'+B'C"}, 0)) {
+			digita("\nUma 'voz-porteiro', que parecia sair da fechadura, me diz:\n"
+					+ "-Você pode prosseguir desta vez, porem aqui não é seu lugar...\n"
+					+ "Antes que eu pudesse entrar no estabelecimento, tropeço em um byte mal colocado e caio no chão, derrubando algumas latas e fazendo barulho.\n",
+					milisPorChar);
+		}
+		// errou
+		else {
+			digita("\nUma 'voz-porteiro', que parecia sair da fechadura, me diz:\n"
+					+ "- Você errou a senha. Errar mais 2 vezes irá soar o alarme.\n", milisPorChar);
+
+			if (embaralhaEEscolheQuatroAlternativas(new String[] { "A'B+BC", "A'B+B'C", "AB+BC'", "AB'+B'C" }, 0)) {
 				// acertou
-				digita("\nUma 'voz-porteiro', que parecia sair da fechadura, me diz:\n" + 
-						"-Voc� pode prosseguir desta vez, porem aqui não é seu lugar...\n" + 
-						"Antes que eu pudesse entrar no estabelecimento, tropeço em um byte mal colocado e caio no ch�o, derrubando algumas latas e fazendo barulho.\n", milisPorChar);
-					}
-			//errou
-			else { 
-				digita("\nUma 'voz-porteiro', que parecia sair da fechadura, me diz:\n" + 
-						"- Voc� errou a senha. Errar mais 1 vezes irá soar o alarme.\n" +
-						"Porem ao ouvir a voz o circuito se modificou\n\n", milisPorChar);
+				digita("\nUma 'voz-porteiro', que parecia sair da fechadura, me diz:\n"
+						+ "-Você pode prosseguir desta vez, porem aqui não é seu lugar...\n"
+						+ "Antes que eu pudesse entrar no estabelecimento, tropeço em um byte mal colocado e caio no chão, derrubando algumas latas e fazendo barulho.\n",
+						milisPorChar);
+			}
+			// errou
+			else {
+				digita("\nUma 'voz-porteiro', que parecia sair da fechadura, me diz:\n"
+						+ "- Você errou a senha. Errar mais 1 vezes irá soar o alarme.\n"
+						+ "Porem ao ouvir a voz o circuito se modificou\n\n", milisPorChar);
 				visualizaImagem("excap2.1.png");
-				
+
 				if (embaralhaEEscolheQuatroAlternativas(
-						new String[] {"ABC (A+D)", "ABC+(A+D)", "ABC'(A+D)'", "'A'BC+(A+D)'"}, 0)) {
+						new String[] { "ABC (A+D)", "ABC+(A+D)", "ABC'(A+D)'", "'A'BC+(A+D)'" }, 0)) {
 					// acertou
-					digita("\nUma 'voz-porteiro', que parecia sair da fechadura, me diz:\n" + 
-							"-Voce pode prosseguir desta vez, por�m aqui não é seu lugar...\n" + 
-							"Antes que eu pudesse entrar no estabelecimento, trope�o em um byte mal colocado e caio no chão, derrubando algumas latas e fazendo barulho.\n", milisPorChar);
-						}
-				//errou
-				else { 
-					digita("\nA �voz-porteiro� grita:\n" + 
-							"- Tentativas esgotadas. INTRUSO. INTRUSO. INTRUSO...\n" + 
-							"Enquanto o barulho percorre o estabelecimento, o porteiro lan�a uma descarga de choque que me lan�a ao ch�o.\n", milisPorChar);
+					digita("\nUma 'voz-porteiro', que parecia sair da fechadura, me diz:\n"
+							+ "-Voce pode prosseguir desta vez, porém aqui não é seu lugar...\n"
+							+ "Antes que eu pudesse entrar no estabelecimento, tropeço em um byte mal colocado e caio no chão, derrubando algumas latas e fazendo barulho.\n",
+							milisPorChar);
+				}
+				// errou
+				else {
+					digita("\nA 'voz-porteiro' grita:\n" + "- Tentativas esgotadas. INTRUSO. INTRUSO. INTRUSO...\n"
+							+ "Enquanto o barulho percorre o estabelecimento, o porteiro lança uma descarga de choque que me derruba no chão.\n",
+							milisPorChar);
 					perdeVida(1);
 				}
 			}
 		}
 		digita("Antes que eu pudesse me levantar um grupo de vírus, capangas de Trojan, vinha em minha direção.\n"
-				+ "Para minha sorte eles estavam meio �bugados� por conta das bebidas virtuais.\n"
-				+ " Suas fun��es estavam alteradas e eu sentia que, mesmo em menor n�mero, eu e meu parceiro pod�amos ganhar deles.\n\n"
+				+ "Para minha sorte eles estavam meio 'bugados' por conta das bebidas virtuais.\n"
+				+ " Suas funções estavam alteradas e eu sentia que, mesmo em menor n�mero, eu e meu parceiro pod�amos ganhar deles.\n\n"
 				+ "Quando eles me percebem, tentando me levantar desajeitadamente, por entre as garrafas vazias que eu acabara de derrubar.\n"
-				+ "O que parecia ser o l�der do bando gritou:\n" + 
-				"- � o Rei Lucas, aquele que o chefe quer. PEGUEM ELEEE!!!\n\n", milisPorChar);
-		//ponto decisivo na historia
-		
+				+ "O que parecia ser o líder do bando gritou:\n"
+				+ "- É o Rei Lucas, aquele que o chefe quer. PEGUEM ELEEE!!!\n\n", milisPorChar);
+
+		// ponto decisivo na historia
+
 		digita("\nDESAFIO: \n\n", milisPorChar);
 
 		digita("Observe a porta logica e atraves da tabela verdade responda\n\n", milisPorChar);
 		visualizaImagem("excap2.2.png");
 		if (embaralhaEEscolheQuatroAlternativas(
-				new String[] {"A=0|B=1|S=1", "A=1|B=0|S=0", "A=1|B=1|S=1", "A=0|B=0|S=1"}, 0)) {
+				new String[] { "A=0|B=1|S=1", "A=1|B=0|S=0", "A=1|B=1|S=1", "A=0|B=0|S=1" }, 0)) {
 			// acertou
 			digita("\nO primeiro veio em minha direção, mesmo pisando em falso por ter acabado de levantar, consegui desviar de seus ataques.\n"
-					+ "Por estar mais b�bado que os demais ele se desequilibrou caiu no ch�o e desmaiou.\n"
+					+ "Por estar mais bêbado que os demais ele se desequilibrou caiu no chão e desmaiou.\n"
 					+ "Vieram mais dois em nossa direção.\n"
 					+ "Vendo o primeiro desmaiado fez com que ficassem com mais raiva e viessem para cima da gente.\n"
-					+ "Mas por sorte com a ajuda do meu parceiro, conseguimos quebrar a cara dos capangas.\n\n", milisPorChar);
-				}
-		//errou
-		else { 
+					+ "Mas por sorte com a ajuda do meu parceiro, conseguimos quebrar a cara dos capangas.\n\n",
+					milisPorChar);
+		}
+		// errou
+		else {
 			digita("\nO primeiro veio em minha direção, ainda estava me levantando e mal tive tempo de me esquivar\n"
-					+ "ja esperava receber o primeiro soco, mas quando olhei pra cima vi que meu parceiro derrubou o primeiro antes que eu pudesse levantar.\n" 
+					+ "ja esperava receber o primeiro soco, mas quando olhei pra cima vi que meu parceiro derrubou o primeiro antes que eu pudesse levantar.\n"
 					+ "Vieram mais dois em nossa direção.\n"
 					+ "Vendo o primeiro desmaiado fez com que ficassem com mais raiva e viessem para cima da gente.\n"
-					+ "Congelei na hora vendo aquela situa��o, porem nem eu e nem meu parceiro conseguimos imobiliza-los. Caímos no chão!\n\n", milisPorChar);
+					+ "Congelei na hora vendo aquela situação, porem nem eu e nem meu parceiro conseguimos imobiliza-los. Caímos no chão!\n\n",
+					milisPorChar);
 			// proximo desafio.
-			
+
 			digita("\nDESAFIO: \n\n", milisPorChar);
 
-			digita("Observe a porta logica e atraves da tabela verdade responda\n\n", milisPorChar);
+			digita("Observe a porta lógica e atraves da tabela verdade responda\n\n", milisPorChar);
 			visualizaImagem("excap2.3.png");
 			if (embaralhaEEscolheQuatroAlternativas(
-					new String[] {"A=1|B=0|S=1", "A=0|B=1|S=0", "A=1|B=1|S=1", "A=0|B=0|S=0"}, 0)) {
+					new String[] { "A=1|B=0|S=1", "A=0|B=1|S=0", "A=1|B=1|S=1", "A=0|B=0|S=0" }, 0)) {
 				// acertou
 
-				digita("\nDessa vez foi o chefe do bando que veio em nossa direção, ele era mais forte e estava com uma garrafa de cerveja quebrada na mão.\n"
+				digita("\nDessa vez foi o líder do bando que veio em nossa direção, ele era mais forte e estava com uma garrafa de cerveja quebrada na mão.\n"
 						+ "A luta durou alguns minutos.\n"
 						+ "Eu e meu parceiro lutamos lado a lado parecendo o japon�s e o americano da Hora do Rush.\n"
-						+ "Apos intensos minutos de briga, conseguimos derrota-lo mas com muita dificuldade.\n", milisPorChar);
-					}
-			//errou
-			else { 
-				digita("\nDessa vez foi o chefe do bando que veio em nossa direção, ele era mais forte e estava com uma garrafa de cerveja quebrada na mão.\n"
+						+ "Apos intensos minutos de briga, conseguimos derrota-lo mas com muita dificuldade.\n",
+						milisPorChar);
+			}
+			// errou
+			else {
+				digita("\nDessa vez foi o líder do bando que veio em nossa direção, ele era mais forte e estava com uma garrafa de cerveja quebrada na mão.\n"
 						+ "A luta durou alguns minutos.\n"
 						+ "Não cedemos até o ultimo minuto, porem ele era mais forte e acabou com a nossa raça.\n\n"
-						+ "Mesmo depois de muito esforço, não conseguimos sair dessa cilada. Nos vimos cercados de capangas que saiam de todos os lados.\n\n", milisPorChar);
-						gameover();
-						agradecimentos();
+						+ "Mesmo depois de muito esforço, não conseguimos sair dessa cilada. Nos vimos cercados de capangas que saiam de todos os lados.\n\n",
+						milisPorChar);
+				gameover();
 			}
 		}
-		// proximo desafio.
-		digita("\nDESAFIO: \n\n", milisPorChar);
 
-		digita("Observe a porta logica e atraves da tabela verdade responda\n\n", milisPorChar);
-		visualizaImagem("excap2.3.png");
-		if (embaralhaEEscolheQuatroAlternativas(
-				new String[] {"A=1|B=0|S=1", "A=0|B=1|S=0", "A=1|B=1|S=1", "A=0|B=0|S=0"}, 0)) {
-			// acertou
-			digita("\nDessa vez foi o chefe do bando que veio em nossa direção, ele era mais forte e estava com uma garrafa de cerveja quebrada na mão.\n"
-					+ "A luta durou alguns minutos.\n"
-					+ "Eu e meu parceiro lutamos lado a lado parecendo o japon�s e o americano da Hora do Rush.\n"
-					+ "Apos intensos minutos de briga, conseguimos derrota-lo mas com muita dificuldade.\n", milisPorChar);
-				}
-		//errou
-		else { 
-			digita("\nDessa vez foi o chefe do bando que veio em nossa direção, ele era mais forte e estava com uma garrafa de cerveja quebrada na m�o.\n"
-					+ "A luta durou alguns minutos.\n"
-					+ "N�o cedemos at� o ultimo minuto, por�m ele era mais forte.\n\n"
-					+ "Ent�o decidimos fugir.Ao voltarmos ao local havistamos dois capangas tentando ajudar um terceiro.\n"
-					+ "Eles vieram na nossa dire��o correndo e me acertou um soco.\n\n", milisPorChar);
-		}
+		digita("\nMesmo depois de alguns problemas que tivemos na situação conseguimos sair por cima.\n"
+				+ "O líder do bando conseguiu fugir, mas conseguimos capturar o capanga bêbado que desmaiou.\n\n"
+				+ "Esperamos o capanga acordar, sua identificação era: Spyware. Ele era um criminoso que, por sorte nossa, tinha informações importantíssimas.\n"
+				+ "Ele nos disse onde o chefe dele estava, mas pra isso nós deveríamos conseguir uma chave de acesso antes...\n"
+				+ "A permissão do Administrador.\n\n", milisPorChar);
 
-		digita ("\nMesmo depois de alguns problemas que tivemos na situa��o conseguimos sair por cima.\n"
-				+ "O chefe do bando conseguiu fugir, mas conseguimos capturar o capanga b�bado que desmaiou.\n\n"
-				+ "Esperamos o capanga acordar, sua identifica��o era: Spyware. Ele era um criminoso que � por sorte nossa � tinha informa��es important�ssimas.\n"
-				+ "Ele nos disse onde o chefe dele estava, mas pra isso n�s dever�amos conseguir uma chave de acesso antes...\n"
-				+ "A permiss�o do Administrador.\n\n", milisPorChar);
-		
 		capituloTres();
-		
+
 	}
 
-	
 	public static void capituloQuatro() throws Exception {
-		
-		digita("Capítulo 4 – O Poderoso Chefão (Final)\n\n\n", milisPorChar);
+
+		digita("Capítulo Quatro – O Poderoso Chefão (Final)\n\n\n", milisPorChar);
 		digita("Enquanto estávamos nos esgueirando por entre os prédios e casas, fiquei pensando como seria se não tivesse \n"
 				+ "baixado aquele vírus. Talvez estaria tranquilo em casa comendo salgadinho e tomando refrigerante enquanto \n"
 				+ "assistia algum vídeo no Youtube.\n\n", milisPorChar);
@@ -730,14 +707,14 @@ public class TrojanRPG {
 		if (embaralhaEEscolheQuatroAlternativas(
 				new String[] { "(A’.B.C).(A+D)’", "(A.B.C).(A+D)", "(A.B.C)’.(A+D)’", "(A’+B+C)+(A.D)’" }, 0)) {
 			// acertou
-			digita("Pegamos pedaços de cano que pareciam ser de ferro e fomos de encontro aos capangas. De repente vimos policiais amigos\n"
+			digita("\nPegamos pedaços de cano que pareciam ser de ferro e fomos de encontro aos capangas. De repente vimos policiais amigos\n"
 					+ " do Alberto. Eles Vieram nos ajudar.\n\n", milisPorChar);
 			digita("Estávamos agora em seis contra oito vírus. Mas mesmo em menor numero os policiais eram habilidosos. Eles sabiam lutar com seus cassetetes. \n"
 					+ "Conseguimos entrar!\n\n", milisPorChar);
 
 		} else {
 			// errou
-			digita("Pegamos pedaços de cano que pareciam ser de ferro e fomos de encontro aos capangas. De repente vimos policiais amigos\n"
+			digita("\nPegamos pedaços de cano que pareciam ser de ferro e fomos de encontro aos capangas. De repente vimos policiais amigos\n"
 					+ " do Alberto. Vieram nos ajudar. Porém eles estavam feridos.\n\n", milisPorChar);
 			digita("Estávamos em seis contra oito vírus. Mas mesmo os policiais sendo habilidosos, a saúde deles não estava bem. Fomos derrotando\n"
 					+ " um por um dos vírus. Mas estávamos ficando cansados e feridos. Com isso vi minha vida descendo dois pontos.\n\n",
@@ -757,21 +734,21 @@ public class TrojanRPG {
 		// desafio antes do dado
 		digita("DESAFIO: \n", milisPorChar);
 		digita("Lucas está no meio de uma enrascada, para ajuda-lo converta a palavra LUTA para binário. \n"
-				+ "Obs.: Tabela Ascii(L:76, U: 85, T: 84, A: 65).\n\n", milisPorChar);
+				+ "Obs.: Tabela Ascii DECIMAL(L:76, U: 85, T: 84, A: 65).\n\n", milisPorChar);
 
 		if (embaralhaEEscolheQuatroAlternativas(new String[] { "(0100 1100), (0101 0101), (0101 0100), (0100 0001)",
 				"(0100 0001), (0101 0100), (0101 0101), (0100 1100)",
 				"(0100 0110), (0101 0101), (0100 0111), (0100 0001)",
 				"(0101 0100), (0101 0010), (0100 1111), (0100 1100), (0100 1100)" }, 0)) {
 			// acertou
-			digita("Um grupo de capangas veio em minha direção e outro na direção do Alberto. A intenção deles era nos deixar separados.\n"
+			digita("\nUm grupo de capangas veio em minha direção e outro na direção do Alberto. A intenção deles era nos deixar separados.\n"
 					+ "Eu estava com um cassetete dos policiais que vieram nos ajudar e consegui me defender. Derrubei um dos capangas e cuidei de seu cachorro.\n"
 					+ "Alberto conseguiu se defender mas estava em uma enrascada\n" + "O plano era nos juntarmos.\n\n",
 					milisPorChar);
 
 		} else {
 			// errou
-			digita("Um grupo de capangas veio em minha direção e outro na direção do Alberto. A intenção deles era nos deixar separados.\r\n"
+			digita("\nUm grupo de capangas veio em minha direção e outro na direção do Alberto. A intenção deles era nos deixar separados.\r\n"
 					+ "Eu ainda estava com um cano na mão, mas isso não era o suficiente. Derrubei um dos capangas, mas o cachorro dele veio \n"
 					+ "em minha direção e mordeu meu braço.\r\n", milisPorChar);
 			perdeVida(2);
@@ -794,7 +771,7 @@ public class TrojanRPG {
 		// destino de Alberto
 		if (numeroTiradoNoDado <= 10) {
 			// alberto morre
-			digita("Tínhamos conseguido nos livrar dos capangas, estávamos nos recuperando para avançar. Escutei duas pessoas conversando:\n"
+			digita("\nTínhamos conseguido nos livrar dos capangas, estávamos nos recuperando para avançar. Escutei duas pessoas conversando:\n"
 					+ "- Não podemos matar ele, o chefe o quer vivo! – disse um dos capangas.\n"
 					+ "- Mas o outro ele não disse nada! – disse o outro. \n"
 					+ "De repente escutei um barulho muito alto e quando olhei para o Alberto ele estava no chão. Com suas linhas de código esparramadas pelo chão.\n"
@@ -806,7 +783,7 @@ public class TrojanRPG {
 
 		} else {
 			// alberto vive
-			digita("Tínhamos conseguido nos livrar dos capangas, estávamos nos recuperando para avançar. Escutei duas pessoas conversando:\n"
+			digita("\nTínhamos conseguido nos livrar dos capangas, estávamos nos recuperando para avançar. Escutei duas pessoas conversando:\n"
 					+ "- Não podemos matar eles, o chefe os quer vivo! – disse um dos capangas.\n"
 					+ "- Ah! Tá bom! – disse o outro decepcionado.\n"
 					+ "Antes que pudesse virar para ver quem era senti um choque percorrendo todo meu corpo e então desmaiei.\n\n",
@@ -835,11 +812,10 @@ public class TrojanRPG {
 				"Postulados: Implementação, Adição e Multiplicação", "Postulados: Adição, Subtração e Multiplicação",
 				"Postulados: Divisão, Subtração e Complementação" }, 0)) {
 			// acertou
-			digita("Ele veio em minha direção com seu charuto tentou apaga-lo minha mão, \n"
-					+ "fui mais rápido e virei fazendo com que queimasse a corda e eu conseguisse me soltar da cadeira.\n"
-					+ "Corri na direção dele com uma garrafa de bebida, que peguei de sua mesa, e bati em sua cabeça, ele tonteou e caiu para trás.\n"
-					+ "Aproveitei para procurar alguma coisa que eu pudesse me armar. A visão dele caído no chão me deu motivação.\n\n",
+			digita("\nEle veio em minha direção com seu charuto tentou apaga-lo minha mão, \n"
+					+ "fui mais rápido e virei fazendo com que queimasse a corda e eu conseguisse me soltar da cadeira.\n",
 					milisPorChar);
+
 			digita("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n" + "%%                                      %%\n"
 					+ "%%                  __                  %%\n" + "%%                 [  ]                 %%\n"
 					+ "%%                 |  |                 %%\n" + "%%                 |  |                 %%\n"
@@ -850,9 +826,14 @@ public class TrojanRPG {
 					+ "%%              [________]              %%\n" + "%%                                      %%\n"
 					+ "%%                                      %%\n" + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n",
 					0);
+
+			digita("Corri na direção dele com uma garrafa de bebida, que peguei de sua mesa, e bati em sua cabeça, ele tonteou e caiu para trás.\n"
+					+ "Aproveitei para procurar alguma coisa que eu pudesse me armar. A visão dele caído no chão me deu motivação.\n\n",
+					milisPorChar);
+
 		} else {
 			// errou
-			digita("Ele veio em minha direção com seu charuto tentou apaga-lo minha mão, não consegui desviar. Gritei de dor. \n"
+			digita("\nEle veio em minha direção com seu charuto tentou apaga-lo minha mão, não consegui desviar. Gritei de dor. \n"
 					+ "Aquele charuto estava muito quente, minha mão ficou em chamas. Com a dor que senti consegui me soltar da cadeira.\n"
 					+ "Corri na direção dele, ele me segurou e me jogou para trás. Ele era muito forte. Caí por cima da mesa. Ele estava vindo em minha direção. \n"
 					+ "Começou a me enforcar. Olhei para o lado e vi a garrafa de bebida que estava sobre a mesa. \n\n",
@@ -876,13 +857,13 @@ public class TrojanRPG {
 
 		// segundo desafio da bossfight
 		digita("DESAFIO: \n", milisPorChar);
-		digita("Enquanto Lucas lutava, em sua frente viu um binário piscando na parede do Hall, parecia o Matriz.\n"
+		digita("Enquanto Lucas lutava, em sua frente viu um binário piscando na parede do Hall, parecia o Matrix.\n"
 				+ "## 01000100 01000101 01010011 01010100 01001001 01001110 01001111 ##\n"
 				+ "Ajude o Lucas a descobrir que mensagem está aparecendo.\n\n", milisPorChar);
 
 		if (embaralhaEEscolheQuatroAlternativas(new String[] { "DESTINO", "BINARIO", "PROJETO", "DESEJOS" }, 0)) {
 			// acertou
-			digita("Procurei na sala e vi que tinha derrubado uma faca de caça quando peguei a garrafa de cima da mesa, antes que ele pudesse reagir \n"
+			digita("\nProcurei na sala e vi que tinha derrubado uma faca de caça quando peguei a garrafa de cima da mesa, antes que ele pudesse reagir \n"
 					+ "corri em sua direção e fiz algo que não achei que seria capaz. Enfiei a faca em seu peito.\n",
 					milisPorChar);
 			digita("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n"
@@ -905,7 +886,7 @@ public class TrojanRPG {
 
 		} else {
 			// errou
-			digita("Procurei na sala e vi que tinha derrubado uma faca de caça quando peguei a garrafa de cima da mesa, fui em direção dela, mas ele me puxou pela perna. \n"
+			digita("\nProcurei na sala e vi que tinha derrubado uma faca de caça quando peguei a garrafa de cima da mesa, fui em direção dela, mas ele me puxou pela perna. \n"
 					+ "Caí de boca no chão e quase perdi a consciência. Ele estava me chutando no chão enquanto eu tentava pegar a faca. Consegui alcança-la e ele percebeu. \n"
 					+ "Quando ele veio por cima de mim e tentou tirar a faca da minha mão, fiz algo que não achei que seria capaz. Enfiei a faca em seu peito.\n",
 					milisPorChar);
@@ -946,14 +927,14 @@ public class TrojanRPG {
 			if (embaralhaEEscolheQuatroAlternativas(
 					new String[] { "48 45 52 4f 49", "54 52 4f 4c 4c", "54 52 4f 49 41", "4d 4f 52 54 45" }, 0)) {
 				// acertou
-				digita("Ele veio em minha direção, me segurou em uma mão. Tentei me soltar, mas não consegui. De repente escutei um barulho alto, \n"
+				digita("\nEle veio em minha direção, me segurou em uma mão. Tentei me soltar, mas não consegui. De repente escutei um barulho alto, \n"
 						+ "um barulho já conhecido. Quando olhei para frente Trojan estava com uma cara de assustado. E ele começou a me soltar. \n"
 						+ "Ele caiu no chão e vi Alberto com um revolver na mão. Ele tinha conseguido na sala ao lado com os capangas do Trojan.\n\n",
 						milisPorChar);
 
 			} else {
 				// errou
-				digita("Ele veio em minha direção, me segurou em uma mão e começou a me bater. Meu rosto estava doendo muito, achei que ia desmaiar naquela hora. \n"
+				digita("\nEle veio em minha direção, me segurou em uma mão e começou a me bater. Meu rosto estava doendo muito, achei que ia desmaiar naquela hora. \n"
 						+ "Tentei me soltar, mas não consegui. De repente escutei um barulho alto, um barulho já conhecido. Quando olhei para frente Trojan estava \n"
 						+ "com uma cara de assustado. E ele começou a me soltar. Ele caiu no chão e vi Alberto com um revolver na mão. Ele tinha conseguido na sala \n"
 						+ "ao lado com os capangas do Trojan\n\n", milisPorChar);
@@ -979,7 +960,6 @@ public class TrojanRPG {
 				+ "Parecia uma situação de guerra, mas ali estavam seguros.\n"
 				+ "Alberto foi ver se seus subordinados e amigos estavam precisando de algo e me disse para procurar na sala dele,\n"
 				+ "pois tinha um cofre que ele nunca tinha aberto. E Nem sabia o que podia ter dentro.\n"
-
 				+ "Fui até lá e a senha estava escrita em decimal do lado do cofre. Porém, o cofre precisava de uma senha em hexadecimal.\n\n",
 				milisPorChar);
 
@@ -988,13 +968,13 @@ public class TrojanRPG {
 		do {
 			digita("A senha é TROJAN escrito em Hexadecimal\n\n"
 
-					+ "escolha a alternativa que corresponde TROJAN em hexadecimal:\n\n", milisPorChar);
+					+ "Obs.: Tabela Ascii DECIMAL( T: 84, R: 82, O: 79 , J: 74 A: 65, N: 78)\n\n", milisPorChar);
 			if (embaralhaEEscolheQuatroAlternativas(
 					new String[] { "54524F4A414E", "597A4G4A6D2A1", "A1D4E533HF1", "A1D8E9A6S1F1" }, 0)) {
 
 				// acertou
 
-				digita("- Consegui! – dei um grito que todos puderam ouvir.\n"
+				digita("\n- Consegui! – dei um grito que todos puderam ouvir.\n"
 						+ "Quando olhei para trás tinha três policiais com caras de assustados e armas em punho me olhando.\n"
 						+ "E o Alberto veio logo em seguida.\n" + "E aí?! Será que está aí?!\n"
 						+ "Procurei dentro do cofre, mas só encontrei papelada,\n"
@@ -1003,7 +983,7 @@ public class TrojanRPG {
 						+ "Quando eu falei sobre a permissão em voz alta, um dos policiais mais velhos disse:\n"
 						+ "- Por que vocês não pedem direto para o Administrador?!\n"
 						+ "Ele pode até ter sido corrompido pelo Trojan, mas ele pode te dar a permissão se gostar de você.\n"
-						+ "Ele ainda vive em sua empresa.", milisPorChar);
+						+ "Ele ainda vive em sua empresa.\n", milisPorChar);
 				saida = 1;
 
 			} else {
@@ -1012,7 +992,7 @@ public class TrojanRPG {
 
 		} while (saida == 0);
 
-		digita("\n- Aquela escrita “B. Rain”! – apontando para a janela.\n", milisPorChar);
+		digita("\n- Aquela escrita “B. Rain”! – apontando para a janela.\n\n", milisPorChar);
 		// ENTRAR NA B RAIN
 
 		capituloTresBRain();
@@ -1044,7 +1024,7 @@ public class TrojanRPG {
 		int saida = 0;
 		do {
 			digita("A senha é TROJAN escrito em Hexadecimal\n\n"
-					+ "escolha a alternativa que corresponde TROJAN em hexadecimal:\n\n", milisPorChar);
+					+ "Obs.: Tabela Ascii DECIMAL( T: 84, R: 82, O: 79 , J: 74 A: 65, N: 78)\n\n", milisPorChar);
 
 			if (embaralhaEEscolheQuatroAlternativas(
 					new String[] { "54524F4A414E", "597A4G4A6D2A1", "A1D4E533HF1", "A1D8E9A6S1F1" }, 0)) {
@@ -1058,7 +1038,7 @@ public class TrojanRPG {
 						+ "Por que vocês não pedem direto para o Administrador?!\n"
 						+ "Ele pode até ter sido corrompido pelo Trojan, mas ele pode te dar a permissão se gostar de você.\n"
 						+ "Ele ainda vive em sua empresa.\n", milisPorChar);
-				digita("- Aquela escrita “B. Rain”! – apontando para a janela\n", milisPorChar);
+				digita("- Aquela escrita “B. Rain”! – apontando para a janela\n\n", milisPorChar);
 
 				saida = 1;
 
@@ -1076,26 +1056,26 @@ public class TrojanRPG {
 	public static void capituloTresBRain() throws Exception {
 		// digita("", milisPorChar);
 
-		digita("\nCapitulo B. RAIN\n\n", milisPorChar);
+		digita("B. RAIN\n\n", milisPorChar);
 
 		digita("Seguimos os conselhos do nosso novo amigo.\n"
 				+ "Eu e meu parceiro, o delegado A. Vast, fomos até o prédio B. Rain.\n"
 				+ "Era enorme, parecia não ter fim, seus andares sumiam em meio às nuvens de bytes.\n"
 				+ "Quando chegamos a frente às grandes portas do prédio ela se abriu.\n"
-				+ "Entramos em uma antessala e ouvimos uma voz:\n"
+				+ "Entramos em uma antessala e ouvimos uma voz:\n\n"
 				+ "- Olá Lucas! Ou será que devo lhe chamar de vossa Alteza?!\n"
-				+ "– Disse ele gargalhando de uma forma debochada.\n"
+				+ "– Disse ele gargalhando de uma forma debochada.\n\n"
 				+ "Um calor começou a subir pelo meu rosto e gritei.\n"
 				+ "Tentei coloca-lo em seu lugar, ora, eu era o rei não é mesmo?\n"
-				+ "Como um trovão sua voz ecoou por todo prédio:\n"
+				+ "Como um trovão sua voz ecoou por todo prédio:\n\n"
 				+ "- VOCÊ NÃO TEM PODER AQUI, Lucas o Rei! – Disse ele com um tom ameaçador.\n"
 				+ "Senti que ele tinha parado e respirado. E retornou dizendo:\n" + "- Bom, vamos fazer um acordo.\n"
-				+ " Se conseguir vir até minha sala darei minha permissão.\n"
+				+ " Se conseguir vir até minha sala darei minha permissão.\n\n"
 				+ "As luzes da sala se apagaram, o medo tomou conta de mim.\n "
 				+ "Como um flash a sala se acendeu, mas agora estava diferente.\n"
 				+ "Possuía um painel em seu centro me perguntando se queria prosseguir,\n"
 				+ "caso a resposta fosse sim eu não sairia até completar o desafio.\n"
-				+ "Porém eu não tinha escolha se eu desistisse aconteceria o pior.\n" + "Então eu aceitei…\n",
+				+ "Porém eu não tinha escolha se eu desistisse aconteceria o pior.\n" + "Então eu aceitei…\n\n",
 				milisPorChar);
 
 		// Loop que não prossegue enquanto não acertar.
@@ -1107,21 +1087,25 @@ public class TrojanRPG {
 		do {
 			digita("\nDESAFIO: \n\n", milisPorChar);
 
-			digita("escolha a alternativa correto onde spyware esteja escrito em octal\n\n", milisPorChar);
-			if (embaralhaEEscolheQuatroAlternativas(
-					new String[] { "123120131127101122105", "123125135127231125105", "123165161427101622105", "123160185123141122105" }, 0)) {
+			digita("escolha a alternativa correto onde SPYWARE esteja escrito em octal\n"
+					+ "Obs.: Tabela Ascii DECIMAL( S: 83, P: 80, Y: 89 , W: 87 A: 65, R: 82, E: 69)\n\n", milisPorChar);
+			if (embaralhaEEscolheQuatroAlternativas(new String[] { "123 120 131 127 101 122 105", "123 125 135 127 231 125 105",
+					"123 165 161 427 101 622 105", "123 160 185 123 141 122 105" }, 0)) {
 
 				// acertou
-				digita("A luz se apagou novamente. Estava nervoso para ver o administrador\n"
+				digita("\nA luz se apagou novamente. Estava nervoso para ver o administrador\n"
 						+ "Eu e meu parceiro ficamos de costas um pro outro, esperando o pior.\n"
 						+ "Quando a luz se acendeu estava ele lá parado na minha frente.\n"
 						+ "Era EU! Ele tinha minha cara. Fiquei apavorado, mas ele me explicou.\n"
 						+ "Como eu era o dono do computador, eu era o próprio administrador.\n"
-						+ "Ele virou pra mim com um cartão.\n" + "Algo como um cartão de acesso escrito: Administrador.\n"
+						+ "Ele virou pra mim com um cartão.\n"
+						+ "Algo como um cartão de acesso escrito: Administrador.\n"
 						+ "- Você vai precisar de uma ajuda, o Trojan é forte. Tome isso, leve com você!\n"
-						+ "– disse o Administrador me entregando uma espécie de colete resistente.\n", milisPorChar);
+						+ "– disse o Administrador me entregando uma espécie de colete resistente.\n\n", milisPorChar);
 				bonusDeVida(1);
 				
+				digita("## Você recebeu 1 HP ##\n\n", milisPorChar);
+
 				sai = 1;
 
 			} else {
@@ -1135,7 +1119,7 @@ public class TrojanRPG {
 				+ "Olhei para meu parceiro ele parecia confuso. Nunca tinha visto do administrador.\n"
 				+ "Mas ele entendeu o que tudo aquilo significava e ficou mais motivado.\n"
 				+ "Ele sabia que a hora estava chegando. Saímos do prédio com determinação.\n"
-				+ "E fomos de encontro a Prefeitura!!", milisPorChar);
+				+ "E fomos de encontro a Prefeitura!!\n\n", milisPorChar);
 
 		capituloQuatro();
 
@@ -1143,8 +1127,10 @@ public class TrojanRPG {
 
 	public static void finalDoJogo() throws Exception {
 		if (vida >= 5) {
-			digita("Trojan estava no chão. Todas suas linhas de código estavam esparramadas pela sala. Eu não acreditava no que estava vendo. Ele realmente estava morto. \n"
-					+ "Ele começou a sumir. Pouco a pouco até não restar nada.\n\n", milisPorChar);
+			digita("Trojan estava no chão. Todas suas linhas de código estavam esparramadas pela sala. Eu não acreditava no que estava vendo.\n"
+					+ "Ele realmente estava morto. \n"
+					+ "Ele começou a sumir. \n"
+					+ "Pouco a pouco até não restar nada.\n\n", milisPorChar);
 
 			digita("/* Descobri tempos depois que por minha causa ele tinha sido apagado da internet de alguma forma. \n"
 					+ "Era possível que ele fosse uma entidade e quando o derrotei ele desapareceu.*/\n\n",
@@ -1155,7 +1141,7 @@ public class TrojanRPG {
 					+ "Comecei a sentir um calor, não consegui me despedir de ninguém.\n"
 					+ "Antes que eu sumisse eu escutei uma voz ao fundo: \n\n", milisPorChar);
 
-			digita("- As definições de vírus foram atualizadas!\n\n", milisPorChar);
+			digita("######     - As definições de vírus foram atualizadas!     ######\n\n", milisPorChar);
 
 			digita("Eu nunca me senti tão feliz em escutar a voz dele novamente. Aquilo foi a prova para mim de que ele estava bem...\n\n",
 					milisPorChar);
@@ -1192,28 +1178,42 @@ public class TrojanRPG {
 
 		digita("Até uma próxima e não vá baixar arquivos suspeitos !!!\n\n", 100);
 
-		digita("Você será redirecionado para o menu", 180);
 		digita("... \n\n\n", 1000);
 
 		menu();
 
 	}
-	
-	public static void gameover() throws Exception{
+
+	public static void gameover() throws Exception {
 		
-		digita("Minha vis�o estava turva. Ela come�ou a se fechar.\n" 
-				+ "Toda a minha vida estava passando por meus olhos.\n" 
-				+ "N�o conseguia gritar e nem chorar.\n" 
-				+ "S� me lembrava de meus pais. \n" 
-				+ "Foi ent�o que morri.\n" 
-				+ "Eu sou apenas um resqu�cio de alma humana. Meu corpo se transformou em um v�rus e est� na companhia de Trojan.\n"
-				+ "Minha alma vaga pelos computadores de outras pessoas para contar minha hist�ria.\n" 
-				+ "Trojan est� livre pela internet.\n" 
-				+ "O que ele fez comigo far� com outras pessoas.\n"
-				+ "Voc� deixar� isso acontecer?\n", milisPorChar);
+		digita("G A M E - O V E R\n\n", milisPorChar);
 		
+		digita("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n" + 
+				"%%                                          %%\n" + 
+				"%%           @@@@@@@@@@@@@@@@@@             %%\n" + 
+				"%%         @@@@@@@@@@@@@@@@@@@@@@@          %%\n" + 
+				"%%       @@@@@@@@@@@@@@@@@@@@@@@@@@@        %%\n" + 
+				"%%      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@       %%\n" + 
+				"%%     @@@@@@@@@@@@@@@/      \\@@@/   @      %%\n" + 
+				"%%    @@@@@@@@@@@@@@@@\\      @@  @___@      %%\n" + 
+				"%%    @@@@@@@@@@@@@ @@@@@@@@@@  | \\@@@@@    %%\n" + 
+				"%%    @@@@@@@@@@@@@ @@@@@@@@@\\__@_/@@@@@    %%\n" + 
+				"%%     @@@@@@@@@@@@@@@/,/,/./'/_|.\\'\\,\\     %%\n" + 
+				"%%       @@@@@@@@@@@@@|  | | | | | | | |    %%\n" + 
+				"%%                     \\_|_|_|_|_|_|_|_|    %%\n" + 
+				"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n" + 
+				"Fonte: https://www.asciiart.eu/\n\n", 0);
+
+		digita("Minha visão estava turva. Ela começou a se fechar.\n"
+				+ "Toda a minha vida estava passando por meus olhos.\n" + "Não conseguia gritar e nem chorar.\n"
+				+ "Só me lembrava de meus pais. \n" + "Foi então que morri.\n"
+				+ "Eu sou apenas um resquício de alma humana. Meu corpo se transformou em um vírus e está na companhia de Trojan.\n"
+				+ "Minha alma vaga pelos computadores de outras pessoas para contar minha história.\n"
+				+ "Trojan está livre pela internet.\n" + "O que ele fez comigo fará com outras pessoas.\n"
+				+ "Você deixará isso acontecer?\n", milisPorChar);
+		digita("\n\n", 1000);
+
 		menu();
-		
-		
+
 	}
 }
