@@ -365,11 +365,11 @@ public class TrojanRPG {
 
 			default:
 				digita("Alternativa não existe!", milisPorChar);
-				;
 				break;
 			}
 		} while (!sai);
-
+		
+		//parte que verifica
 		if (escolhaCorreta == alternativas[indiceCorreto]) {
 			return true;
 		} else {
