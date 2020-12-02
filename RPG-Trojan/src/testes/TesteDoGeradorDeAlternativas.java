@@ -6,12 +6,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class TesteDosMetodos {
+public class TesteDoGeradorDeAlternativas {
 	//variavel "global"
 	static Scanner entrada = new Scanner(System.in);
-	static Random random = new Random();
 	
-	static long milisPorChar = 20; //valor padrao � 65;
+	static long milisPorChar = 20; //valor padrao é 65;
 	
 	
 	
@@ -26,24 +25,13 @@ public class TesteDosMetodos {
 		 
 		
 		
-		//ideia abaixo foi retirada do jogo final...
-		int totalTiradoNosDados = 0;
-		int nDeJogadasDoDado = 3;
-		//jogar os dados
-		for (int i = 0; i < nDeJogadasDoDado ; i++) {
-			totalTiradoNosDados += random.nextInt(6)+1;
-			System.out.println(totalTiradoNosDados);
-		}
-		
-		System.out.println("Total: "+ totalTiradoNosDados);
-		
 	}
 	
 	
 	
 	
 	
-	
+	//metodo "embaralhaEEscolheQuatroAlternativas" possui "digita" como dependencia
 	public static void digita(String mensagem, long milisPorChar) throws InterruptedException {
 		for (int i = 0; i < mensagem.length(); i++) {
 			System.out.print(mensagem.charAt(i));
